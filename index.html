@@ -635,21 +635,23 @@
 
     <!-------------------- Dark Mode Script (start) ------------------------>
     <script>
-      // Dark/Light Mode Toggle Functionality
       document.addEventListener('DOMContentLoaded', function() {
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
-        
-        // Check for saved theme preference or respect OS preference
+    
+        // Load saved theme (default = light)
         const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    
+        if (savedTheme === 'dark') {
           body.classList.add('dark-mode');
           if (themeToggle) themeToggle.checked = true;
+        } else {
+          body.classList.remove('dark-mode');
+          if (themeToggle) themeToggle.checked = false;
+          localStorage.setItem('theme', 'light');
         }
         
-        // Toggle theme on checkbox change
+        // Toggle on click
         if (themeToggle) {
           themeToggle.addEventListener('change', function() {
             if (this.checked) {
@@ -667,3 +669,4 @@
 
   </body>
 </html>
+
