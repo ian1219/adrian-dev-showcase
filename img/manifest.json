@@ -1,0 +1,246 @@
+{
+  "img/Apparel_Ideas/customer/cart.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Apparel_Ideas/customer/create-prod.webp": {
+    "width": 1600,
+    "height": 859
+  },
+  "img/Apparel_Ideas/customer/edit-page.webp": {
+    "width": 1600,
+    "height": 944
+  },
+  "img/Apparel_Ideas/customer/home.webp": {
+    "width": 1600,
+    "height": 1055
+  },
+  "img/Apparel_Ideas/customer/items.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Apparel_Ideas/customer/product-table.webp": {
+    "width": 1600,
+    "height": 909
+  },
+  "img/Apparel_Ideas/customer/products.webp": {
+    "width": 1600,
+    "height": 1746
+  },
+  "img/Apparel_Ideas/customer/profile-drop-down.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Apparel_Ideas/Landing-1.webp": {
+    "width": 1600,
+    "height": 910
+  },
+  "img/Apparel_Ideas/Landing-2.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Apparel_Ideas/Landing.webp": {
+    "width": 1600,
+    "height": 912
+  },
+  "img/Apparel_Ideas/policy/about.webp": {
+    "width": 1600,
+    "height": 910
+  },
+  "img/Apparel_Ideas/policy/privacy-policy.webp": {
+    "width": 1600,
+    "height": 1430
+  },
+  "img/Apparel_Ideas/policy/standards.webp": {
+    "width": 1600,
+    "height": 1111
+  },
+  "img/Apparel_Ideas/policy/TOS.webp": {
+    "width": 1600,
+    "height": 2300
+  },
+  "img/Apparel_Ideas/Sign-in.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Apparel_Ideas/Sign-up.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/admin/barangay.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/admin/dashboard.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/admin/mdrrmo.webp": {
+    "width": 790,
+    "height": 390
+  },
+  "img/capstone/admin/profile.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/admin/records.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/admin/residents-form.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/admin/residents.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/admin/sms-settings.webp": {
+    "width": 1600,
+    "height": 957
+  },
+  "img/capstone/admin/water-level.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/hardware-achievements/achievement.webp": {
+    "width": 686,
+    "height": 810
+  },
+  "img/capstone/hardware-achievements/capstone-book.webp": {
+    "width": 1600,
+    "height": 2014
+  },
+  "img/capstone/hardware-achievements/hardware-1.webp": {
+    "width": 960,
+    "height": 1920
+  },
+  "img/capstone/hardware-achievements/hardware-2.webp": {
+    "width": 960,
+    "height": 1920
+  },
+  "img/capstone/hardware-achievements/macabebe.webp": {
+    "width": 1536,
+    "height": 2048
+  },
+  "img/capstone/hardware-achievements/sms.webp": {
+    "width": 1080,
+    "height": 1920
+  },
+  "img/capstone/landing-registration.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/landing.webp": {
+    "width": 1600,
+    "height": 1131
+  },
+  "img/capstone/sign-in.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/capstone/sign-up.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/add-product.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/add-user.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/admin-order-details.webp": {
+    "width": 1600,
+    "height": 1207
+  },
+  "img/Kaizen/admin/admin-orders.webp": {
+    "width": 1600,
+    "height": 917
+  },
+  "img/Kaizen/admin/customer-table.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/dashboard-1.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/dashboard.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/edit-customer.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/edit-product.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/edit-user.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/product-table.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/admin/user-table.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/cart.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/home.webp": {
+    "width": 1600,
+    "height": 909
+  },
+  "img/Kaizen/customer/item.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/my-address.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/order-details.webp": {
+    "width": 1600,
+    "height": 913
+  },
+  "img/Kaizen/customer/order-unpaid.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/orders.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/payment.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/profile.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/customer/search-bar.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/landing.webp": {
+    "width": 1600,
+    "height": 909
+  },
+  "img/Kaizen/sign-in.webp": {
+    "width": 1600,
+    "height": 900
+  },
+  "img/Kaizen/sign-up.webp": {
+    "width": 1600,
+    "height": 900
+  }
+}

@@ -1,0 +1,17 @@
+# Original PNG screenshots, kept locally as a backup before WebP conversion.
+# Too large for the repo (~22 MB); img/ holds the optimized .webp files.
+img-original/
+
+# Only ever installed temporarily to run tools/to-webp.mjs
+node_modules/
+package-lock.json
+
+# Throwaway test/diagnostic scripts run against a local server
+.*.mjs
+.audit-shots/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
