@@ -4,91 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Adrian Del Rosario — Full Stack Developer | Next.js, Prisma, Laravel</title>
+    <title>Adrian Del Rosario — Full-Stack Developer | Next.js, Prisma, Laravel</title>
     <meta
       name="description"
-      content="Adrian Del Rosario is a Full Stack Developer in Manila, Philippines. Four live client systems built and maintained at AP Creative with Next.js and Prisma — payment gateway checkout, Lalamove delivery dispatch, admin dashboards and promoter commission tracking."
+      content="Full-Stack Developer in Manila building reliable systems for ordering, payments, reservations, admin operations and third-party integrations. Four production systems built and maintained with Next.js, Prisma, Xendit and the Lalamove API."
     />
     <meta name="author" content="Adrian Del Rosario" />
     <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#0d0d0f" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://ian1219.github.io/adrian-dev-showcase/" />
 
-    <!-- Open Graph / Twitter — so shared links render a real preview card -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Adrian Del Rosario — Portfolio" />
-    <meta property="og:title" content="Adrian Del Rosario — Full Stack Developer" />
+    <meta property="og:site_name" content="Adrian Del Rosario" />
+    <meta property="og:title" content="Adrian Del Rosario — Full-Stack Developer" />
     <meta
       property="og:description"
-      content="Full Stack Developer in Manila. Four live client systems built at AP Creative with Next.js and Prisma — payments, delivery dispatch, admin dashboards."
+      content="Full-Stack Developer in Manila. Ordering, payments, reservations, admin dashboards and third-party integrations — four systems live in production."
     />
     <meta property="og:url" content="https://ian1219.github.io/adrian-dev-showcase/" />
     <meta
       property="og:image"
-      content="https://ian1219.github.io/adrian-dev-showcase/img/Apparel_Ideas/Landing.webp"
+      content="https://ian1219.github.io/adrian-dev-showcase/img/clients/alqaysar.webp"
     />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Adrian Del Rosario — Full Stack Developer" />
+    <meta name="twitter:title" content="Adrian Del Rosario — Full-Stack Developer" />
     <meta
       name="twitter:description"
-      content="Full Stack Developer in Manila. Four live client systems built at AP Creative with Next.js and Prisma."
+      content="Full-Stack Developer in Manila. Four production systems built and maintained."
     />
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="favicon.svg" />
 
-    <!--
-      Runs before first paint. Any later and dark-mode visitors see a white
-      flash on every load, so this one script has to stay inline and blocking.
-    -->
+    <!-- Runs before first paint so the correct theme is there immediately. -->
     <script>
       (() => {
-        let theme = "light";
+        let t = "light";
         try {
-          theme = localStorage.getItem("theme") || "light";
-        } catch (e) {
-          /* private browsing */
-        }
-        document.documentElement.dataset.theme = theme;
+          t = localStorage.getItem("theme") ||
+            (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+        } catch (e) {}
+        document.documentElement.dataset.theme = t;
       })();
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      rel="stylesheet"
-      integrity="sha384-nRgPTkuX86pH8yjPJUAFuASXQSSl2/bBUiNV47vSYpKFxHJhbcrGnmlYpYJMeD7a"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!--
-      Version query busts the browser cache. GitHub Pages serves these with
-      Cache-Control: max-age=600, so a returning visitor would otherwise keep
-      an old stylesheet and see a half-styled page. Bump the date on any
-      release that changes style.css or script.js.
-    -->
-    <link rel="stylesheet" href="style.css?v=20260728" />
+    <link rel="stylesheet" href="style.css?v=20260729" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Adrian Del Rosario",
-        "jobTitle": "Full Stack Developer",
+        "jobTitle": "Full-Stack Developer",
+        "url": "https://ian1219.github.io/adrian-dev-showcase/",
         "email": "mailto:adriandelrosario180112@gmail.com",
         "telephone": "+639368214854",
         "address": {
@@ -107,1770 +81,1495 @@
           "url": "https://psau.edu.ph/"
         },
         "knowsAbout": [
-          "Next.js",
-          "Prisma",
-          "React.js",
-          "TypeScript",
-          "Laravel",
-          "PHP",
-          "Node.js",
-          "MySQL",
-          "PostgreSQL",
-          "RESTful APIs",
-          "Payment gateway integration",
-          "Third-party API integration"
+          "Next.js", "React", "TypeScript", "JavaScript", "Tailwind CSS",
+          "Laravel", "PHP", "REST APIs", "Node.js", "Go", "Java", "C++",
+          "Prisma", "PostgreSQL", "MySQL", "Git", "Vercel"
         ],
         "sameAs": [
-          "https://www.linkedin.com/in/del-rosario-adrian-d-880464286",
           "https://github.com/ian1219",
-          "https://www.facebook.com/share/1FSU6kgRNL/?mibextid=wwXIfr"
+          "https://www.linkedin.com/in/del-rosario-adrian-d-880464286"
         ]
       }
     </script>
   </head>
 
   <body>
-    <a class="skip-link" href="#home">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!------------------------------ Navbar (start) ----------------------------->
-    <header>
-      <nav class="navbar navbar-expand-xl fixed-top custom-navbar" aria-label="Main">
-        <div class="container">
-          <a class="navbar-brand" href="#home">
-            <span class="brand-highlight">&lt;</span>IAN THE DEV<span
-              class="brand-highlight"
-              >/&gt;</span
-            >
-          </a>
+    <!-- Icon sprite: replaces an icon-font CDN entirely. -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.11-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.62-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5Z"/>
+      </symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>
+      </symbol>
+      <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/>
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M7 17 17 7"/><path d="M7 7h10v10"/>
+      </symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+      </symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m20 6-11 11-5-5"/>
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m6 9 6 6 6-6"/>
+      </symbol>
+      <symbol id="i-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m15 18-6-6 6-6"/>
+      </symbol>
+      <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 18 6-6-6-6"/>
+      </symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </symbol>
+      <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4.35-4.35a2 2 0 0 0-2.83 0L3 21"/>
+      </symbol>
+      <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 17 9 5 9-5"/><path d="m3 12 9 5 9-5"/>
+      </symbol>
+      <symbol id="i-plug" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 2v6M15 2v6"/><path d="M6 8h12v3a6 6 0 0 1-12 0V8Z"/><path d="M12 17v5"/>
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+      </symbol>
+      <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/>
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+      </symbol>
+    </svg>
+
+    <!-- ============================ HEADER ============================ -->
+    <header class="site-header" id="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#home">
+          <span>&lt;</span>ian the dev<span>/&gt;</span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="#home">Home</a>
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <input type="checkbox" id="theme-switch" aria-label="Switch to dark theme" />
+          <label class="theme-toggle" for="theme-switch">
+            <svg class="i-sun" aria-hidden="true"><use href="#i-sun" /></svg>
+            <svg class="i-moon" aria-hidden="true"><use href="#i-moon" /></svg>
+            <span class="theme-knob" aria-hidden="true"></span>
+          </label>
+
           <button
-            class="navbar-toggler"
+            class="menu-btn"
+            id="menu-btn"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
+            aria-controls="nav"
             aria-expanded="false"
-            aria-label="Toggle navigation menu"
+            aria-label="Open menu"
           >
-            <span class="navbar-toggler-icon"></span>
+            <svg class="i-menu" aria-hidden="true"><use href="#i-menu" /></svg>
+            <svg class="i-close" aria-hidden="true"><use href="#i-close" /></svg>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-xl-center">
-              <li class="nav-item">
-                <a class="nav-link active" href="#home" aria-current="true">Home</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#work">Client Work</a></li>
-              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-              <li class="nav-item">
-                <a class="nav-link" href="#experience">Experience</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-              <li class="nav-item">
-                <div class="theme-toggle-container">
-                  <input
-                    type="checkbox"
-                    id="theme-toggle"
-                    class="theme-checkbox"
-                    aria-label="Toggle dark mode"
-                  />
-                  <label for="theme-toggle" class="theme-toggle-label">
-                    <i class="fas fa-sun theme-icon sun" aria-hidden="true"></i>
-                    <i class="fas fa-moon theme-icon moon" aria-hidden="true"></i>
-                    <span class="theme-toggle-slider" aria-hidden="true"></span>
-                  </label>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
-      </nav>
+      </div>
     </header>
-    <!------------------------------ Navbar (end) ----------------------------->
 
-    <main>
-      <!------------------------------ Hero (start) ----------------------------->
-      <section id="home" class="hero-section" aria-labelledby="hero-heading">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-xl-6">
-              <p class="hero-available mono">Open to work — Manila, PH</p>
+    <main id="main">
+      <!-- ============================= HERO ============================= -->
+      <section class="section hero" id="home" aria-labelledby="hero-h">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div>
+              <p class="hero-status mono">Open to work — Manila, PH</p>
 
-              <h1 id="hero-heading">Adrian Del&nbsp;Rosario</h1>
+              <h1 id="hero-h">Adrian Del Rosario</h1>
 
-              <p class="hero-role mono">
-                <span>Full Stack Developer</span>
-                <span class="sep" aria-hidden="true"></span>
-                <span>Next.js · Prisma · Laravel</span>
+              <p class="hero-role">
+                Full-Stack Developer building reliable systems for ordering,
+                payments, reservations, admin operations and third-party
+                integrations.
               </p>
 
-              <p class="hero-lede">
-                I build the systems businesses actually run on — online ordering
-                that takes payment and dispatches a courier, a club booking
-                platform with its own admin dashboard and commission-earning
-                promoter accounts. <strong>Four live systems</strong>, shipped
-                and maintained at AP Creative.
+              <p class="hero-intro">
+                I turn business requirements into production-ready applications
+                from database architecture and payment workflows to admin
+                dashboards, integrations, deployment and ongoing maintenance.
               </p>
 
               <div class="hero-actions">
-                <a href="#work" class="btn-solid">See the live work</a>
-                <a href="#contact" class="btn-ghost">Get in touch</a>
+                <a class="btn btn-primary" href="#work">View Selected Work</a>
+                <a class="btn btn-outline" href="#contact">Contact Me</a>
+              </div>
+
+              <div class="hero-links">
+                <a class="icon-link" href="https://github.com/ian1219" target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true"><use href="#i-github" /></svg>
+                  GitHub
+                </a>
+                <a class="icon-link" href="https://www.linkedin.com/in/del-rosario-adrian-d-880464286" target="_blank" rel="noopener noreferrer">
+                  <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
+                  LinkedIn
+                </a>
+                <a class="icon-link" href="mailto:adriandelrosario180112@gmail.com">
+                  <svg aria-hidden="true"><use href="#i-mail" /></svg>
+                  Email
+                </a>
               </div>
             </div>
 
-            <div class="col-xl-6">
-              <div class="code-box">
-                <div class="code-box-bar" aria-hidden="true">
-                  <span></span><span></span><span></span>
-                  <span class="file">developer.ts</span>
-                </div>
-                <pre><code>const developer = {
-  name:    "Adrian Del Rosario",
-  role:    "Full Stack Developer",
-  at:      "AP Creative",
-  stack:   ["Next.js", "Prisma", "Laravel"],
-  shipped: 4,  // live client systems
-  based:   "Manila, PH",
-  open:    true,
-};
-
-console.log("Let's work together.");</code></pre>
+            <div class="code-card" aria-hidden="true">
+              <div class="code-bar">
+                <i></i><i></i><i></i><span>developer.ts</span>
               </div>
+              <pre><code>const developer = {
+  name:     <b>"Adrian Del Rosario"</b>,
+  role:     <b>"Full-Stack Developer"</b>,
+  company:  <b>"AP Creative"</b>,
+  frontend: [<b>"Next.js"</b>, <b>"React"</b>],
+  backend:  [<b>"Laravel"</b>, <b>"Node.js"</b>],
+  database: [<b>"Prisma"</b>, <b>"PostgreSQL"</b>, <b>"MySQL"</b>],
+  based:    <b>"Manila, PH"</b>,
+  open:     <b>true</b>,
+};</code></pre>
             </div>
           </div>
 
-          <!-- Stats strip -->
-          <dl class="stats" data-reveal-stagger>
-            <div>
-              <dd class="stat-value">04</dd>
-              <dt class="stat-label mono">Live client systems</dt>
+          <dl class="stats">
+            <div class="stat">
+              <dd class="stat-num">4</dd>
+              <dt class="stat-label">Production Systems</dt>
             </div>
-            <div>
-              <dd class="stat-value">02</dd>
-              <dt class="stat-label mono">Built from scratch</dt>
+            <div class="stat">
+              <dd class="stat-num">2</dd>
+              <dt class="stat-label">Built from Scratch</dt>
             </div>
-            <div>
-              <dd class="stat-value">2+</dd>
-              <dt class="stat-label mono">Years in production</dt>
+            <div class="stat">
+              <dd class="stat-num">2</dd>
+              <dt class="stat-label">Years of Experience</dt>
             </div>
-            <div>
-              <dd class="stat-value">20+</dd>
-              <dt class="stat-label mono">Technologies</dt>
+            <div class="stat">
+              <dd class="stat-num">20+</dd>
+              <dt class="stat-label">Technologies Used</dt>
             </div>
           </dl>
         </div>
       </section>
-      <!------------------------------- Hero (end) ------------------------------->
 
-      <!-- Tech marquee: duplicated track so the loop is seamless -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-          <span>Next.js</span><span>Prisma</span><span>React</span><span>TypeScript</span
-          ><span>Laravel</span><span>PHP</span><span>Node.js</span><span>PostgreSQL</span
-          ><span>Payment Gateway API</span><span>Lalamove API</span><span>Tailwind CSS</span
-          ><span>Git</span><span>Vercel</span>
-          <span>Next.js</span><span>Prisma</span><span>React</span><span>TypeScript</span
-          ><span>Laravel</span><span>PHP</span><span>Node.js</span><span>PostgreSQL</span
-          ><span>Payment Gateway API</span><span>Lalamove API</span><span>Tailwind CSS</span
-          ><span>Git</span><span>Vercel</span>
-        </div>
-      </div>
-
-      <!--------------------------- Client Work (start) -------------------------->
-      <section id="work" class="is-inverted" aria-labelledby="work-heading">
-        <div class="container">
-          <div class="section-head" data-reveal>
-            <p class="section-eyebrow mono">
-              <span class="section-index">01</span> <span>Client Work</span>
-            </p>
-            <h2 id="work-heading" class="section-title">Live in production</h2>
-            <p class="section-lede">
-              Four systems I build and maintain at
-              <a href="https://apcreativecorp.com/en" target="_blank" rel="noopener noreferrer"
-                >AP Creative Advertising Corp</a
-              >. These are full-stack applications, not landing pages — money
-              moves through them, couriers are dispatched by them, and staff run
-              their day from the dashboards behind them.
+      <!-- ====================== SELECTED PRODUCTION WORK ====================== -->
+      <section class="section" id="work" aria-labelledby="work-h">
+        <div class="wrap">
+          <div class="sec-head" data-reveal>
+            <span class="sec-eyebrow mono">Selected Production Work</span>
+            <h2 class="sec-title" id="work-h">Systems running live businesses</h2>
+            <p class="sec-lede">
+              Four production systems built and maintained at
+              <a href="https://apcreativecorp.com/en" target="_blank" rel="noopener noreferrer">AP Creative Advertising Corp</a>.
+              Real customers place orders, book tables and pay through these
+              applications every day.
             </p>
           </div>
 
-          <ul class="work-capabilities" data-reveal>
-            <li>Payment gateway API</li>
-            <li>Lalamove delivery API</li>
-            <li>Role-based admin dashboards</li>
-            <li>Promoter &amp; commission tracking</li>
-            <li>Reservation engines</li>
-            <li>Auth &amp; user accounts</li>
-            <li>Prisma data modelling</li>
-          </ul>
-
-          <!-- Tier 1: built from scratch — full-width case spreads -->
-          <div class="work-tier">
-            <p class="work-tier-label mono">Built from scratch</p>
-
-            <!-- Al Qaysar -->
-            <article class="case-spread" data-reveal>
-              <p class="case-index mono">
-                <span class="num">01</span>
-                <span>Ordering &amp; delivery platform</span>
-              </p>
-              <h3>Al Qaysar Restaurant</h3>
-              <div class="case-sub">
-                <span class="role-badge built">Built from scratch</span>
-                <span class="client-type">Halal Middle Eastern · Manila</span>
+          <div class="cases">
+            <!-- ---------------- Al Qaysar ---------------- -->
+            <article class="case" data-reveal>
+              <div class="case-media">
+                <div class="shot">
+                  <div class="shot-bar" aria-hidden="true">
+                    <i></i><i></i><i></i><span>alqaysar-restaurant.com</span>
+                  </div>
+                  <img
+                    src="img/clients/alqaysar.webp"
+                    alt="Al Qaysar Restaurant homepage showing the quick-picks sidebar, hero banner and menu categories"
+                    width="1440" height="900" loading="lazy" decoding="async"
+                  />
+                </div>
               </div>
 
               <div class="case-body">
-                <div class="case-narrative">
-                  <p>
-                    Al Qaysar has served halal Middle Eastern food in Manila
-                    since 2015, and until this build there was no way to order
-                    from them online. The brief was never a website with a menu
-                    on it. It was the machinery to take an order, take payment
-                    for it, and get a courier to the customer's door — and to
-                    do that without anyone in the restaurant having to
-                    reconcile the three by hand.
-                  </p>
-                  <p>
-                    The whole thing runs as one Next.js application. The menu is
-                    modelled in Prisma across more than twenty-four categories,
-                    with sorting by price, newest and popularity, a daily deals
-                    section, and favourites for customers who sign in. Cart and
-                    checkout sit on top of that, and checkout hands off to an
-                    integrated payment gateway API.
-                  </p>
-                  <p>
-                    The part that actually needed care is the seam between
-                    paying and delivering. Payment state and order state are
-                    modelled separately, so an order can only move toward
-                    dispatch once the gateway confirms the money has cleared —
-                    there is no path through the system where food goes out
-                    against an unpaid order. Once an order is confirmed it is
-                    handed to <strong>Lalamove</strong> through their API, which
-                    books the courier and owns the delivery leg from there.
-                  </p>
-                  <p>
-                    Table reservations run alongside all of it on their own data
-                    model. A dine-in booking and a delivery order share nothing
-                    but a customer, and keeping them separate means neither
-                    flow can corrupt the other.
-                  </p>
+                <span class="case-cat mono">Ordering &amp; Delivery Platform</span>
+                <h3 class="case-title">Al Qaysar Restaurant</h3>
 
-                  <ul class="case-features">
-                    <li>Checkout wired to a payment gateway API</li>
-                    <li>Lalamove API integration for courier dispatch</li>
-                    <li>24+ category menu with sorting and daily deals</li>
-                    <li>Customer accounts, favourites and table reservations</li>
-                  </ul>
+                <div class="case-labels">
+                  <span class="badge badge-solid">Built from Scratch</span>
+                  <span class="badge">Production System</span>
+                </div>
 
-                  <ul class="case-metrics">
-                    <li>
-                      <span class="case-metric-value">24+</span>
-                      <span class="case-metric-label mono">Menu categories</span>
-                    </li>
-                    <li>
-                      <span class="case-metric-value">2</span>
-                      <span class="case-metric-label mono">Third-party APIs</span>
-                    </li>
+                <p class="case-summary">
+                  A halal Middle Eastern restaurant selling online through
+                  foodpanda and Grab, where aggregator commission runs 35–40% on
+                  every order. I built them a direct channel they own — live
+                  Lalamove courier quotes at checkout, payment through Xendit,
+                  and a kitchen dashboard where staff dispatch the rider against
+                  the held quote.
+                </p>
+
+                <ul class="case-results">
+                  <li>
+                    <svg aria-hidden="true"><use href="#i-check" /></svg>
+                    <span>A direct ordering channel that avoids the 35–40% cut foodpanda and Grab take, so the restaurant can price below the aggregators</span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true"><use href="#i-check" /></svg>
+                    <span>Customers see the real courier fee at checkout — the Lalamove quote is re-verified server-side, so a tampered fee is rejected</span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true"><use href="#i-check" /></svg>
+                    <span>Order, line items and payment are written in one transaction; a failed gateway session rolls the order back instead of orphaning it</span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true"><use href="#i-check" /></svg>
+                    <span>Payment, kitchen and courier are three records with one owner each — cleared payment guards rider booking, staff decide when it happens</span>
+                  </li>
+                </ul>
+
+                <div class="case-block case-features">
+                  <span class="case-block-label mono">Key features</span>
+                  <ul class="case-list">
+                    <li>Admin-managed menu with sorting, best-sellers, recommended items and favourites</li>
+                    <li>Cart with per-item instructions, delivery or pickup, guest checkout for pickup</li>
+                    <li>Xendit invoices — GCash, bank transfer or card — with webhook amount verification</li>
+                    <li>Lalamove quotation, booking and webhook-driven delivery tracking</li>
+                    <li>Role-based admin dashboard with reports and PDF/XLSX export</li>
                   </ul>
                 </div>
 
-                <div class="anatomy">
-                  <span class="anatomy-title mono">System anatomy</span>
-                  <dl>
-                    <div><dt class="mono">Framework</dt><dd>Next.js</dd></div>
-                    <div><dt class="mono">Data</dt><dd>Prisma · PostgreSQL</dd></div>
-                    <div><dt class="mono">Styling</dt><dd>Tailwind CSS</dd></div>
-                    <div><dt class="mono">Payments</dt><dd>Payment gateway API</dd></div>
-                    <div><dt class="mono">Delivery</dt><dd>Lalamove API</dd></div>
-                    <div><dt class="mono">Storage</dt><dd>Vercel Blob</dd></div>
-                    <div><dt class="mono">Hosting</dt><dd>Vercel</dd></div>
-                  </dl>
-                </div>
-              </div>
+                <ul class="tags case-tags">
+                  <li class="tag tag-strong">Next.js 16</li>
+                  <li class="tag tag-strong">React 19</li>
+                  <li class="tag tag-strong">Prisma 7</li>
+                  <li class="tag tag-strong">PostgreSQL</li>
+                  <li class="tag tag-strong">Xendit</li>
+                  <li class="tag tag-strong">Lalamove API</li>
+                  <li class="tag">Better Auth</li>
+                  <li class="tag">Vercel Blob</li>
+                  <li class="tag">Tailwind CSS</li>
+                  <li class="tag">Vercel</li>
+                </ul>
 
-              <div class="case-actions">
-                <button class="btn-case" type="button" data-modal="alQaysarModal">
-                  Read the case study
-                </button>
-                <a
-                  class="client-link"
-                  href="https://www.alqaysar-restaurant.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>alqaysar-restaurant.com</span>
-                  <span class="arrow" aria-hidden="true">↗</span>
-                  <span class="visually-hidden">(opens in a new tab)</span>
-                </a>
+                <div class="case-actions">
+                  <a class="btn btn-primary" href="https://www.alqaysar-restaurant.com/" target="_blank" rel="noopener noreferrer">
+                    Visit Live Site
+                    <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                  </a>
+                  <button class="btn btn-outline" type="button" data-dialog="d-alqaysar">
+                    Read Case Study
+                  </button>
+                </div>
               </div>
             </article>
 
-            <!-- LOBO -->
-            <article class="case-spread" data-reveal>
-              <p class="case-index mono">
-                <span class="num">02</span>
-                <span>Booking &amp; promoter platform</span>
-              </p>
-              <h3>LOBO Superclub &amp; VIP JTV</h3>
-              <div class="case-sub">
-                <span class="role-badge built">Built from scratch</span>
-                <span class="client-type">Nightlife · Malate, Manila</span>
+            <!-- ---------------- LOBO ---------------- -->
+            <article class="case" data-reveal>
+              <div class="case-media">
+                <div class="shot">
+                  <div class="shot-bar" aria-hidden="true">
+                    <i></i><i></i><i></i><span>lobosuperclub.com</span>
+                  </div>
+                  <img
+                    src="img/clients/lobo.webp"
+                    alt="LOBO Superclub homepage showing the venue branding and reservation entry point"
+                    width="1440" height="900" loading="lazy" decoding="async"
+                  />
+                </div>
               </div>
 
               <div class="case-body">
-                <div class="case-narrative">
-                  <p>
-                    LOBO Superclub &amp; VIP JTV is a premium nightlife venue in
-                    Malate that trades from 8PM to 8AM. Nearly all of its
-                    revenue arrives as a table reservation, which meant the site
-                    could not simply advertise the venue — it had to be the
-                    system the venue is operated from.
-                  </p>
-                  <p>
-                    What ships as one domain is really three applications over a
-                    shared data model. Guests browse VIP packages, the bar area
-                    and the events calendar, and reserve a table. Staff work
-                    from an <strong>admin dashboard</strong> where every
-                    reservation lands and can be managed, alongside packages,
-                    events and site content — this is the part guests never see
-                    and the part the venue actually runs its night from. And
-                    promoters, the partners who bring people through the door,
-                    get accounts of their own.
-                  </p>
-                  <p>
-                    The <strong>promoter programme</strong> is what makes this
-                    more than a booking form. A promoter registers, invites
-                    guests, and earns commission of up to
-                    <strong>12%</strong> on the business they bring in. That
-                    only works if the chain holds end to end: promoter →
-                    invited guest → reservation → commission. Every link is
-                    attributed in the data, so a payout is calculated from real
-                    records rather than counted off receipts at the end of the
-                    week.
-                  </p>
-                  <p>
-                    Underneath sits role-based access across three account
-                    types. A guest, a promoter and an admin each reach a
-                    different surface of the same application and see only what
-                    they should — which is a permissions problem before it is a
-                    layout problem.
-                  </p>
+                <span class="case-cat mono">Reservation &amp; Promoter Platform</span>
+                <h3 class="case-title">LOBO Superclub &amp; VIP JTV</h3>
 
-                  <ul class="case-features">
-                    <li>Admin dashboard over every reservation, package and event</li>
-                    <li>Promoter accounts with guest invitations and commission tracking</li>
-                    <li>Role-based access across guest, promoter and admin</li>
-                    <li>VIP table booking, events calendar and venue gallery</li>
-                  </ul>
+                <div class="case-labels">
+                  <span class="badge badge-solid">Built from Scratch</span>
+                  <span class="badge">Production System</span>
+                </div>
 
-                  <ul class="case-metrics">
-                    <li>
-                      <span class="case-metric-value">3</span>
-                      <span class="case-metric-label mono">Account types</span>
-                    </li>
-                    <li>
-                      <span class="case-metric-value">12%</span>
-                      <span class="case-metric-label mono">Max promoter commission</span>
-                    </li>
+                <p class="case-summary">
+                  A premium nightlife venue in Malate whose revenue arrives
+                  almost entirely as table reservations. I built the system the
+                  venue is operated from: booking and table allocation, cashier
+                  settlement, a QR guest list, and a promoter programme that
+                  calculates commission from VAT-exclusive transaction records.
+                </p>
+
+                <ul class="case-results">
+                  <li>
+                    <svg aria-hidden="true"><use href="#i-check" /></svg>
+                    <span>Reservations, table allocation and payment settlement centralised in one dashboard instead of message threads</span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true"><use href="#i-check" /></svg>
+                    <span>Promoter commission tiered at 7% / 10%, calculated from VAT-exclusive transaction records rather than manual weekly tallies</span>
+                  </li>
+                  <li>
+                    <svg aria-hidden="true"><use href="#i-check" /></svg>
+                    <span>Two separate auth systems — four staff roles across a 25-permission matrix, plus standalone promoter accounts</span>
+                  </li>
+                </ul>
+
+                <div class="case-block case-features">
+                  <span class="case-block-label mono">Key features</span>
+                  <ul class="case-list">
+                    <li>Table reservation flow with live availability, zone/category allocation and package tiers</li>
+                    <li>QR guest list — registration, signed tokens with expiry, and camera check-in at the door</li>
+                    <li>Cashier settlement with automatic 12% VAT breakdown and loyalty points accrual</li>
+                    <li>Promoter programme: invitations, referral attribution, tiered commission and payout reporting</li>
+                    <li>Admin dashboard with floor plan, table board, customer CRM and content management</li>
+                    <li>Multilingual public site — English, Korean, Japanese and Chinese</li>
                   </ul>
                 </div>
 
-                <div class="anatomy">
-                  <span class="anatomy-title mono">System anatomy</span>
-                  <dl>
-                    <div><dt class="mono">Framework</dt><dd>Next.js</dd></div>
-                    <div><dt class="mono">Data</dt><dd>Prisma</dd></div>
-                    <div><dt class="mono">Auth</dt><dd>Role-based — guest, promoter, admin</dd></div>
-                    <div><dt class="mono">Styling</dt><dd>Tailwind CSS</dd></div>
-                    <div><dt class="mono">Admin</dt><dd>Reservations, packages, events, content</dd></div>
-                    <div><dt class="mono">Hosting</dt><dd>Vercel</dd></div>
-                  </dl>
-                </div>
-              </div>
+                <ul class="tags case-tags">
+                  <li class="tag tag-strong">Next.js</li>
+                  <li class="tag tag-strong">Prisma</li>
+                  <li class="tag tag-strong">TypeScript</li>
+                  <li class="tag tag-strong">PostgreSQL (Neon)</li>
+                  <li class="tag tag-strong">Tailwind CSS</li>
+                  <li class="tag">JWT</li>
+                  <li class="tag">Zod</li>
+                  <li class="tag">Vercel Blob</li>
+                  <li class="tag">Resend</li>
+                  <li class="tag">Vercel</li>
+                </ul>
 
-              <div class="case-actions">
-                <button class="btn-case" type="button" data-modal="loboModal">
-                  Read the case study
-                </button>
-                <a
-                  class="client-link"
-                  href="https://www.lobosuperclub.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>lobosuperclub.com</span>
-                  <span class="arrow" aria-hidden="true">↗</span>
-                  <span class="visually-hidden">(opens in a new tab)</span>
-                </a>
+                <div class="case-actions">
+                  <a class="btn btn-primary" href="https://www.lobosuperclub.com/" target="_blank" rel="noopener noreferrer">
+                    Visit Live Site
+                    <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+                  </a>
+                  <button class="btn btn-outline" type="button" data-dialog="d-lobo">
+                    Read Case Study
+                  </button>
+                </div>
               </div>
             </article>
           </div>
 
-          <!-- Tier 2: inherited and improved — compact ledger -->
-          <div class="work-tier" data-reveal>
-            <p class="work-tier-label mono">Maintained &amp; enhanced</p>
+          <!-- ---------------- Maintained tier ---------------- -->
+          <p class="tier-label mono">Maintained &amp; Enhanced</p>
 
-            <div class="ledger">
-              <article class="ledger-row">
-                <span class="ledger-num mono">03</span>
-                <h3 class="ledger-title">
-                  Pro Group E-Bike
-                  <span class="ledger-type mono">E-commerce storefront · Manila</span>
-                </h3>
-                <p class="ledger-desc">
-                  An e-bike and scooter retailer selling across Shopee, Lazada,
-                  TikTok and their own Taft Avenue showroom. I inherited the
-                  Next.js build and keep the catalogue, page performance and
-                  technical SEO in shape as the product range changes, alongside
-                  the test-ride booking and newsletter capture flows.
+          <div class="mini-grid">
+            <article class="mini" data-reveal>
+              <div class="shot">
+                <div class="shot-bar" aria-hidden="true">
+                  <i></i><i></i><i></i><span>progroup.com.ph</span>
+                </div>
+                <img
+                  src="img/clients/progroup.webp"
+                  alt="Pro Group E-Bike storefront showing the product range and promotions"
+                  width="1440" height="900" loading="lazy" decoding="async"
+                />
+              </div>
+              <div class="mini-body">
+                <h3>Pro Group E-Bike</h3>
+                <div class="mini-meta">
+                  <span class="badge">Maintained &amp; Enhanced</span>
+                  <span class="badge">Production System</span>
+                </div>
+                <p>
+                  E-mobility retailer selling across Shopee, Lazada, TikTok and a
+                  Taft Avenue showroom. I inherited the Next.js build and keep
+                  the catalogue, page performance and technical SEO in shape as
+                  the product range changes, alongside the test-ride booking and
+                  newsletter flows.
                 </p>
-                <ul class="ledger-tech">
-                  <li>Next.js</li>
-                  <li>React</li>
-                  <li>SEO</li>
-                  <li>Performance</li>
+                <ul class="tags">
+                  <li class="tag tag-strong">Next.js</li>
+                  <li class="tag tag-strong">React</li>
+                  <li class="tag">SEO</li>
+                  <li class="tag">Performance</li>
                 </ul>
-                <a
-                  class="ledger-link"
-                  href="https://www.progroup.com.ph/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Visit</span>
-                  <span class="arrow" aria-hidden="true">↗</span>
-                  <span class="visually-hidden">progroup.com.ph (opens in a new tab)</span>
+                <a class="btn btn-outline" href="https://www.progroup.com.ph/" target="_blank" rel="noopener noreferrer">
+                  Visit Website
+                  <svg aria-hidden="true"><use href="#i-arrow" /></svg>
                 </a>
-              </article>
+              </div>
+            </article>
 
-              <article class="ledger-row">
-                <span class="ledger-num mono">04</span>
-                <h3 class="ledger-title">
-                  Neon Nights Bar Club
-                  <span class="ledger-type mono">Reservation platform · Poblacion</span>
-                </h3>
-                <p class="ledger-desc">
-                  A Makati club whose booking flow is an interactive floor plan —
-                  guests pick the actual table rather than filling in a form. I
-                  maintain and extend that flow, the lounge, bar, billiard and
-                  beer pong package tiers behind it, and the reservation handoff
-                  to WhatsApp.
+            <article class="mini" data-reveal>
+              <div class="shot">
+                <div class="shot-bar" aria-hidden="true">
+                  <i></i><i></i><i></i><span>neonnightsbarclub.com</span>
+                </div>
+                <img
+                  src="img/clients/neonnights.webp"
+                  alt="Neon Nights Bar Club homepage showing the venue branding and booking entry point"
+                  width="1440" height="900" loading="lazy" decoding="async"
+                />
+              </div>
+              <div class="mini-body">
+                <h3>Neon Nights Bar Club</h3>
+                <div class="mini-meta">
+                  <span class="badge">Maintained &amp; Enhanced</span>
+                  <span class="badge">Production System</span>
+                </div>
+                <p>
+                  A Poblacion club whose booking flow is an interactive floor
+                  plan — guests pick the actual table rather than filling in a
+                  form. I maintain and extend that flow, the lounge, bar,
+                  billiard and beer pong package tiers behind it, and the
+                  reservation handoff to WhatsApp.
                 </p>
-                <ul class="ledger-tech">
-                  <li>Next.js</li>
-                  <li>React</li>
-                  <li>Vercel</li>
+                <ul class="tags">
+                  <li class="tag tag-strong">Next.js</li>
+                  <li class="tag tag-strong">React</li>
+                  <li class="tag">Vercel</li>
                 </ul>
-                <a
-                  class="ledger-link"
-                  href="https://neonnightsbarclub.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Visit</span>
-                  <span class="arrow" aria-hidden="true">↗</span>
-                  <span class="visually-hidden">neonnightsbarclub.com (opens in a new tab)</span>
+                <a class="btn btn-outline" href="https://neonnightsbarclub.com/" target="_blank" rel="noopener noreferrer">
+                  Visit Website
+                  <svg aria-hidden="true"><use href="#i-arrow" /></svg>
                 </a>
-              </article>
-            </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
-      <!--------------------------- Client Work (end) ---------------------------->
 
-      <!------------------------------ About (start) ----------------------------->
-      <section id="about" aria-labelledby="about-heading">
-        <div class="container">
-          <div class="section-head" data-reveal>
-            <p class="section-eyebrow mono">
-              <span class="section-index">02</span> <span>About</span>
+      <!-- ========================= PROFESSIONAL IMPACT ========================= -->
+      <section class="section section-tinted" id="impact" aria-labelledby="impact-h">
+        <div class="wrap">
+          <div class="sec-head" data-reveal>
+            <span class="sec-eyebrow mono">Professional Impact</span>
+            <h2 class="sec-title" id="impact-h">What I have delivered</h2>
+            <p class="sec-lede">
+              The work behind the four systems above — the parts that decide
+              whether a business can actually run on the software.
             </p>
-            <h2 id="about-heading" class="section-title">Who I am</h2>
           </div>
 
-          <div class="row g-5 mb-5">
-            <div class="col-lg-5" data-reveal>
-              <p class="about-lead">
-                I turn a vague brief into a schema, then into something a
-                business can run on.
-              </p>
-            </div>
+          <div class="impact-grid" data-reveal>
+            <article class="impact-card">
+              <svg aria-hidden="true"><use href="#i-layers" /></svg>
+              <span class="impact-num">4</span>
+              <h3>Production systems</h3>
+              <p>Built or maintained end to end, from data model through deployment and ongoing support.</p>
+            </article>
 
-            <div class="col-lg-7 about-body prose" data-reveal>
+            <article class="impact-card">
+              <svg aria-hidden="true"><use href="#i-plug" /></svg>
+              <span class="impact-num">3</span>
+              <h3>Third-party integrations</h3>
+              <p>Xendit payments, Lalamove courier dispatch and Semaphore SMS, each with webhook and failure handling.</p>
+            </article>
+
+            <article class="impact-card">
+              <svg aria-hidden="true"><use href="#i-shield" /></svg>
+              <span class="impact-num">5</span>
+              <h3>Account roles supported</h3>
+              <p>Four staff roles behind a 25-permission matrix, plus promoter accounts on a separate auth system.</p>
+            </article>
+
+            <article class="impact-card">
+              <svg aria-hidden="true"><use href="#i-card" /></svg>
+              <span class="impact-num">2</span>
+              <h3>Payment &amp; commission workflows</h3>
+              <p>Xendit checkout with webhook confirmation, and tiered commission derived from VAT-exclusive settlements.</p>
+            </article>
+
+            <article class="impact-card">
+              <svg aria-hidden="true"><use href="#i-calendar" /></svg>
+              <span class="impact-num">2</span>
+              <h3>Reservation systems</h3>
+              <p>Table booking and allocation built for LOBO, plus the inherited floor-plan flow I maintain at Neon Nights.</p>
+            </article>
+
+            <article class="impact-card">
+              <svg aria-hidden="true"><use href="#i-arrow" /></svg>
+              <span class="impact-num">2</span>
+              <h3>Inherited codebases improved</h3>
+              <p>Existing production sites taken over and kept current — features, performance and technical SEO.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== ABOUT ============================== -->
+      <section class="section" id="about" aria-labelledby="about-h">
+        <div class="wrap">
+          <div class="sec-head" data-reveal>
+            <span class="sec-eyebrow mono">About</span>
+            <h2 class="sec-title" id="about-h">
+              I turn business requirements into reliable production systems.
+            </h2>
+          </div>
+
+          <div class="about-grid" data-reveal>
+            <div class="about-body">
               <p>
-                I started backend-first — PHP, Laravel, REST APIs, database
-                design — and grew into full stack at
-                <strong>AP Creative Advertising Corp</strong>, where I now take
-                client systems from an empty repository to a live domain.
+                I started backend-first with PHP, Laravel, REST APIs and database
+                design and grew into full-stack work at AP Creative
+                Advertising Corp, where I now take client systems from an empty
+                repository to a live domain and keep them running afterwards.
               </p>
               <p>
                 Most of what I ship is transactional: carts and checkout,
-                payment gateway integration, third-party APIs like Lalamove,
-                reservation engines, role-based admin dashboards. The
-                interesting part is rarely the framework — it's getting the data
-                model and the state transitions right, so an order can't be
-                dispatched before it's paid and a booking can't be double-sold.
-              </p>
-              <p>
-                Before that I spent a year refactoring legacy PHP at Golden
-                Arrow Digital Solutions, then five months at NTT Limited
-                building a casino platform from scratch in Laravel and React
-                alongside a full engineering team.
-              </p>
-              <p class="about-note">
-                BS Information Technology —
-                <a href="https://psau.edu.ph/" target="_blank" rel="noopener noreferrer"
-                  >Pampanga State Agricultural University</a
-                >, 2019–2023. Based in Malate, Manila.
-              </p>
-            </div>
-          </div>
-
-          <!-- Skills -->
-          <div data-reveal>
-            <div class="section-head section-head--sub">
-              <p class="section-eyebrow mono">
-                <span class="section-index">02.1</span> <span>Skills</span>
-              </p>
-              <h3 class="section-title section-title--sub">What I work with</h3>
-              <p class="section-lede">
-                Grouped by what each one is for, and marked by how often I
-                actually use it — so you can tell my daily tools apart from
-                things I've simply worked with.
+                payment confirmation, courier dispatch, reservations, promoter
+                commission, role-based dashboards. Those systems live or die on
+                whether their states stay consistent when something fails, so
+                that is where I spend my attention.
               </p>
             </div>
 
-            <div class="skills-legend">
-              <span class="legend-item">
-                <span class="legend-swatch core" aria-hidden="true"></span>
-                Core — I use these daily
-              </span>
-              <span class="legend-item">
-                <span class="legend-swatch" aria-hidden="true"></span>
-                Working knowledge
-              </span>
-            </div>
-
-            <div class="skill-cards">
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <span class="skill-card-index mono">01</span>
-                  <h4>Frontend</h4>
+            <aside class="about-card">
+              <dl class="about-facts">
+                <div>
+                  <dt>Role</dt>
+                  <dd>Full-Stack Developer</dd>
                 </div>
-                <p class="skill-card-desc">
-                  Interfaces that hold up on a phone as well as a 27-inch
-                  monitor.
-                </p>
-                <ul class="skill-list">
-                  <li class="core">Next.js</li>
-                  <li class="core">React.js</li>
-                  <li class="core">TypeScript</li>
-                  <li class="core">JavaScript</li>
-                  <li class="core">Tailwind CSS</li>
-                  <li class="core">HTML5</li>
-                  <li class="core">CSS3</li>
-                  <li>Bootstrap</li>
-                </ul>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <span class="skill-card-index mono">02</span>
-                  <h4>Backend</h4>
+                <div>
+                  <dt>Company</dt>
+                  <dd>AP Creative Advertising Corp</dd>
                 </div>
-                <p class="skill-card-desc">
-                  APIs and business logic, with the database designed before the
-                  first route is written.
-                </p>
-                <ul class="skill-list">
-                  <li class="core">Laravel</li>
-                  <li class="core">PHP</li>
-                  <li class="core">Node.js</li>
-                  <li class="core">REST APIs</li>
-                  <li>Java</li>
-                  <li>C++</li>
-                  <li>Go</li>
-                </ul>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <span class="skill-card-index mono">03</span>
-                  <h4>Data</h4>
+                <div>
+                  <dt>Focus</dt>
+                  <dd>Next.js and Prisma applications with payment, logistics and reservation workflows</dd>
                 </div>
-                <p class="skill-card-desc">
-                  Schemas built to survive the features nobody has asked for
-                  yet.
-                </p>
-                <ul class="skill-list">
-                  <li class="core">Prisma</li>
-                  <li class="core">PostgreSQL</li>
-                  <li class="core">MySQL</li>
-                </ul>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <span class="skill-card-index mono">04</span>
-                  <h4>Integrations</h4>
+                <div>
+                  <dt>Location</dt>
+                  <dd>Malate, Manila, Philippines</dd>
                 </div>
-                <p class="skill-card-desc">
-                  Third-party systems wired in so money and goods actually move.
-                </p>
-                <ul class="skill-list">
-                  <li class="core">Payment gateway API</li>
-                  <li class="core">Lalamove API</li>
-                  <li class="core">Role-based auth</li>
-                  <li>Semaphore SMS</li>
-                </ul>
-              </article>
-
-              <article class="skill-card">
-                <div class="skill-card-head">
-                  <span class="skill-card-index mono">05</span>
-                  <h4>Tools &amp; Delivery</h4>
+                <div>
+                  <dt>Education</dt>
+                  <dd>
+                    BS Information Technology,
+                    <a href="https://psau.edu.ph/" target="_blank" rel="noopener noreferrer">PSAU</a>
+                    · 2019–2023
+                  </dd>
                 </div>
-                <p class="skill-card-desc">
-                  Everything between a commit and a site that is actually live.
-                </p>
-                <ul class="skill-list">
-                  <li class="core">Git</li>
-                  <li class="core">Vercel</li>
-                  <li>GitLab</li>
-                  <li>Postman</li>
-                  <li>WordPress</li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <!-- How I work -->
-          <div data-reveal>
-            <div class="section-head section-head--sub">
-              <p class="section-eyebrow mono">
-                <span class="section-index">02.2</span> <span>Process</span>
-              </p>
-              <h3 class="section-title section-title--sub">How I work</h3>
-              <p class="section-lede">
-                The same four steps on every project, in this order. Most of the
-                mistakes I have had to unpick came from skipping the second one.
-              </p>
-            </div>
-
-            <ol class="process">
-              <li>
-                <span class="process-num mono">01</span>
-                <h4>Understand the business</h4>
-                <p>
-                  Before any code: what does this place actually make money
-                  from? For a restaurant it is completed paid orders; for a club
-                  it is booked tables. Whatever that is becomes the thing the
-                  system is built around, and everything else is arranged to
-                  serve it.
-                </p>
-              </li>
-              <li>
-                <span class="process-num mono">02</span>
-                <h4>Model the data</h4>
-                <p>
-                  The schema comes before the first screen. I map the entities
-                  and the states they can be in — an order that is unpaid,
-                  paid, dispatched — because the features nobody has asked for
-                  yet will be built on these tables, and a wrong shape here is
-                  expensive to fix later.
-                </p>
-              </li>
-              <li>
-                <span class="process-num mono">03</span>
-                <h4>Build the flows</h4>
-                <p>
-                  Then the application: the paths a customer, a promoter or an
-                  admin actually walks. Third-party integrations get wired at
-                  this stage, and the transitions between them are where I spend
-                  the most care — a courier should never be booked against an
-                  order the gateway has not cleared.
-                </p>
-              </li>
-              <li>
-                <span class="process-num mono">04</span>
-                <h4>Ship and keep it running</h4>
-                <p>
-                  Deploy to Vercel, then stay with it. Performance, image
-                  delivery and technical SEO get tuned after launch, and new
-                  requirements arrive constantly. Two of the four live sites I
-                  work on were inherited from someone else — I know what
-                  maintainable looks like from the receiving end.
-                </p>
-              </li>
-            </ol>
+              </dl>
+            </aside>
           </div>
         </div>
       </section>
-      <!------------------------------ About (end) ----------------------------->
 
-      <!---------------------------- Experience (start) -------------------------->
-      <section id="experience" aria-labelledby="experience-heading">
-        <div class="container">
-          <div class="section-head" data-reveal>
-            <p class="section-eyebrow mono">
-              <span class="section-index">03</span> <span>Experience</span>
+      <!-- ============================== SKILLS ============================== -->
+      <section class="section section-tinted" id="skills" aria-labelledby="skills-h">
+        <div class="wrap">
+          <div class="sec-head" data-reveal>
+            <span class="sec-eyebrow mono">Skills &amp; Technologies</span>
+            <h2 class="sec-title" id="skills-h">What I build with</h2>
+            <p class="sec-lede">
+              Grouped by what each one is for. Everything listed here is
+              something I have actually used — at work or during my degree.
             </p>
-            <h2 id="experience-heading" class="section-title">Where I've worked</h2>
-            <p class="section-lede">
-              Three teams — backend-first, then full stack.
+          </div>
+
+          <div class="skill-grid" data-reveal>
+            <article class="skill-card">
+              <h3>Frontend</h3>
+              <ul class="tags">
+                <li class="tag">Next.js</li>
+                <li class="tag">React</li>
+                <li class="tag">TypeScript</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">Bootstrap</li>
+              </ul>
+            </article>
+
+            <article class="skill-card">
+              <h3>Backend</h3>
+              <ul class="tags">
+                <li class="tag">Laravel</li>
+                <li class="tag">PHP</li>
+                <li class="tag">REST APIs</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">Go</li>
+                <li class="tag">Java</li>
+                <li class="tag">C++</li>
+              </ul>
+            </article>
+
+            <article class="skill-card">
+              <h3>Database</h3>
+              <ul class="tags">
+                <li class="tag">Prisma</li>
+                <li class="tag">PostgreSQL</li>
+                <li class="tag">MySQL</li>
+              </ul>
+            </article>
+
+            <article class="skill-card">
+              <h3>Testing</h3>
+              <ul class="tags">
+                <li class="tag">Postman</li>
+                <li class="tag">Unit testing</li>
+                <li class="tag">Feature testing</li>
+                <li class="tag">API testing</li>
+                <li class="tag">Manual testing</li>
+              </ul>
+            </article>
+
+            <article class="skill-card">
+              <h3>Development &amp; Other Tools</h3>
+              <ul class="tags">
+                <li class="tag">VS Code</li>
+                <li class="tag">Github</li>
+                <li class="tag">Git</li>
+                <li class="tag">GitLab</li>
+                <li class="tag">Vercel</li>
+                <li class="tag">WordPress</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================= PROCESS ============================= -->
+      <section class="section" id="process" aria-labelledby="process-h">
+        <div class="wrap">
+          <div class="sec-head" data-reveal>
+            <span class="sec-eyebrow mono">Work Process</span>
+            <h2 class="sec-title" id="process-h">How I work</h2>
+            <p class="sec-lede">
+              The same four stages on every project, in this order.
             </p>
+          </div>
+
+          <ol class="process-grid" data-reveal>
+            <li class="step">
+              <span class="step-num mono">01</span>
+              <h3>Understand the Business</h3>
+              <p>
+                What does this place make money from? For a restaurant it is
+                completed paid orders; for a club it is booked tables. That
+                becomes the thing the system is built around.
+              </p>
+            </li>
+            <li class="step">
+              <span class="step-num mono">02</span>
+              <h3>Model the Data</h3>
+              <p>
+                The schema comes before the first screen. Entities and the
+                states they can be in — unpaid, paid, dispatched — because
+                everything later is built on these tables.
+              </p>
+            </li>
+            <li class="step">
+              <span class="step-num mono">03</span>
+              <h3>Build and Validate the Flows</h3>
+              <p>
+                The paths a customer, promoter or admin actually walks.
+                Integrations get wired here, and the transitions between them
+                are tested against the failure cases, not just the happy path.
+              </p>
+            </li>
+            <li class="step">
+              <span class="step-num mono">04</span>
+              <h3>Deploy, Monitor and Improve</h3>
+              <p>
+                Ship to Vercel, then stay with it. Performance, image delivery
+                and technical SEO get tuned after launch, and new requirements
+                keep arriving.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- =========================== EXPERIENCE =========================== -->
+      <section class="section section-tinted" id="experience" aria-labelledby="exp-h">
+        <div class="wrap">
+          <div class="sec-head" data-reveal>
+            <span class="sec-eyebrow mono">Professional Experience</span>
+            <h2 class="sec-title" id="exp-h">Where I have worked</h2>
           </div>
 
           <div class="timeline" data-reveal>
-            <!-- AP Creative -->
-            <article class="timeline-item is-current">
-              <p class="timeline-date mono">
+            <article class="job is-current">
+              <p class="job-date mono">
                 <span>March 2026 — Present</span>
-                <span class="badge-current">Current</span>
+                <span class="badge badge-solid">Current</span>
               </p>
-              <h3>Full Stack Developer</h3>
-              <span class="timeline-company">
-                AP Creative Advertising Corp · Makati City
-              </span>
-              <p>
-                I own client systems end to end — data model, application code,
-                third-party integrations, deployment, and everything that
-                happens after launch. Four are live: two I built from an empty
-                repository, two I inherited and improved.
+              <h3>Full-Stack Developer</h3>
+              <span class="job-org">AP Creative Advertising Corp · Makati City, Philippines</span>
+              <p class="job-summary">
+                I own client systems from planning and data modelling through
+                development, integration, deployment and ongoing maintenance.
+                Four are live in production.
               </p>
-              <button class="btn-see-more" type="button" data-modal="apCreativeModal">
-                Full details
-              </button>
+              <ul class="job-wins">
+                <li>Built two systems from an empty repository: an ordering and delivery platform, and a reservation platform with a QR guest list and a tiered promoter commission engine.</li>
+                <li>Integrated Xendit and the Lalamove courier API — live quotes verified server-side, webhook-confirmed payment, and rider booking guarded by cleared payment but triggered by kitchen staff.</li>
+                <li>Built two independent authentication systems with edge session validation and a 25-permission matrix across four staff roles.</li>
+                <li>Took over two existing Next.js codebases and keep their features, performance and technical SEO current.</li>
+                <li>Deploy and monitor on Vercel, working with designers and the marketing team on requirements.</li>
+              </ul>
+              <ul class="tags">
+                <li class="tag tag-strong">Next.js</li>
+                <li class="tag tag-strong">Prisma</li>
+                <li class="tag tag-strong">TypeScript</li>
+                <li class="tag tag-strong">PostgreSQL</li>
+                <li class="tag">Vercel</li>
+              </ul>
+              <button class="btn-quiet" type="button" data-dialog="d-apcreative">Role details</button>
             </article>
 
-            <!-- NTT -->
-            <article class="timeline-item">
-              <p class="timeline-date mono"><span>Mar — Jul 2025</span></p>
+            <article class="job">
+              <p class="job-date mono"><span>March — July 2025</span></p>
               <h3>Junior Fullstack Developer</h3>
-              <span class="timeline-company">
-                NTT Limited Philippines Branch · Quezon City
-              </span>
-              <p>
+              <span class="job-org">NTT Limited Philippines Branch · Quezon City, Philippines</span>
+              <p class="job-summary">
                 Built a casino game platform from scratch with a full
-                engineering team — Laravel APIs, a React player interface, a
-                back-office admin, and Go scripts for service integration.
-                Contributed to the initial architecture and the database schema.
+                engineering team, covering both the player-facing product and
+                the back-office system.
               </p>
-              <button class="btn-see-more" type="button" data-modal="nttModal">
-                Full details
-              </button>
+              <ul class="job-wins">
+                <li>Developed backend logic and RESTful APIs in Laravel for the player and back-office systems.</li>
+                <li>Built interactive, responsive interfaces in React for the player side.</li>
+                <li>Wrote Go scripts for data fetching and service integration.</li>
+                <li>Contributed to the initial system architecture and the database schema.</li>
+                <li>Took part in code reviews and enforced clean architecture and OOP patterns.</li>
+              </ul>
+              <ul class="tags">
+                <li class="tag tag-strong">Laravel</li>
+                <li class="tag tag-strong">React</li>
+                <li class="tag">Go</li>
+                <li class="tag">MySQL</li>
+              </ul>
+              <button class="btn-quiet" type="button" data-dialog="d-ntt">Role details</button>
             </article>
 
-            <!-- Golden Arrow -->
-            <article class="timeline-item">
-              <p class="timeline-date mono"><span>Jan 2024 — Feb 2025</span></p>
+            <article class="job">
+              <p class="job-date mono"><span>January 2024 — February 2025</span></p>
               <h3>Junior PHP Programmer</h3>
-              <span class="timeline-company">
-                Golden Arrow Digital Solutions · Makati City
-              </span>
-              <p>
-                My first developer role. Refactored legacy modules into clean
-                OOP, wrote RESTful APIs from scratch, and covered them with unit
-                and feature tests. Took on frontend work outside my assigned
-                scope to keep integrations consistent.
+              <span class="job-org">Golden Arrow Digital Solutions · Makati City, Philippines</span>
+              <p class="job-summary">
+                My first developer role, focused on improving and stabilising an
+                existing production web platform.
               </p>
-              <button class="btn-see-more" type="button" data-modal="goldenArrowModal">
-                Full details
-              </button>
+              <ul class="job-wins">
+                <li>Refactored legacy modules into clean OOP, reducing redundancy and bug surface.</li>
+                <li>Developed RESTful APIs from scratch using established design patterns.</li>
+                <li>Wrote unit and feature tests, and validated endpoints with Postman.</li>
+                <li>Improved overall system responsiveness and maintainability.</li>
+                <li>Took on frontend work outside my assigned scope to keep integrations consistent.</li>
+              </ul>
+              <ul class="tags">
+                <li class="tag tag-strong">PHP</li>
+                <li class="tag tag-strong">Laravel</li>
+                <li class="tag">MySQL</li>
+                <li class="tag">Postman</li>
+              </ul>
+              <button class="btn-quiet" type="button" data-dialog="d-golden">Role details</button>
             </article>
           </div>
         </div>
       </section>
-      <!---------------------------- Experience (end) ---------------------------->
 
-      <!------------------------ Personal Projects (start) ----------------------->
-      <section id="projects" aria-labelledby="projects-heading">
-        <div class="container">
-          <div class="section-head" data-reveal>
-            <p class="section-eyebrow mono">
-              <span class="section-index">04</span> <span>Projects</span>
-            </p>
-            <h2 id="projects-heading" class="section-title">Personal builds</h2>
-            <p class="section-lede">
-              Academic and self-directed work from before my first developer
-              job. These are where the architecture I now use professionally
-              was learned the slow way — by getting it wrong first.
+      <!-- =========================== PERSONAL PROJECTS =========================== -->
+      <section class="section" id="projects" aria-labelledby="proj-h">
+        <div class="wrap">
+          <div class="sec-head" data-reveal>
+            <span class="sec-eyebrow mono">Personal Projects</span>
+            <h2 class="sec-title" id="proj-h">Academic &amp; self-directed builds</h2>
+            <p class="sec-lede">
+              Work from before my first developer role. These are where the
+              foundations came from — kept separate from the production systems
+              above.
             </p>
           </div>
 
           <div class="builds">
-            <!-- Apparel Ideas -->
             <article class="build" data-reveal>
-              <p class="build-index mono">
-                <span class="num">01</span>
-                <span>E-commerce · Laravel</span>
-              </p>
-
-              <div class="browser-frame">
-                <div class="browser-bar" aria-hidden="true">
-                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                  <span class="addr">apparel-ideas · landing page</span>
+              <div class="shot">
+                <div class="shot-bar" aria-hidden="true">
+                  <i></i><i></i><i></i><span>apparel-ideas</span>
                 </div>
                 <img
                   src="img/Apparel_Ideas/Landing.webp"
-                  alt="Apparel Ideas e-commerce landing page showing the clothing product grid"
-                  width="1600"
-                  height="912"
-                  loading="lazy"
-                  decoding="async"
+                  alt="Apparel Ideas landing page showing the clothing store hero and feature list"
+                  width="1600" height="912" loading="lazy" decoding="async"
                 />
               </div>
-
-              <h3>Apparel Ideas</h3>
-              <ul class="build-tech">
-                <li>Laravel</li>
-                <li>MySQL</li>
-                <li>Tailwind CSS</li>
-                <li>Bootstrap 5</li>
-                <li>MVC</li>
-              </ul>
-
-              <div class="build-cols">
-                <div>
-                  <span class="build-col-label mono">What it is</span>
-                  <p>
-                    An e-commerce platform for a clothing business, built on
-                    Laravel's MVC structure with MySQL behind it. Customers
-                    browse a product catalogue, build a cart and check out; the
-                    owner gets full CRUD over the products and the pages that
-                    surround them.
-                  </p>
-                </div>
-                <div>
-                  <span class="build-col-label mono">What I built</span>
-                  <p>
-                    Product and category models with the tables designed first,
-                    the cart and ordering flow, an admin side for creating and
-                    editing products, and the legal pages a real store cannot
-                    launch without — terms of service, privacy policy and
-                    community standards. Tailwind and Bootstrap 5 share the
-                    front end.
-                  </p>
-                </div>
-              </div>
-
-              <div class="build-note">
+              <div class="build-body">
+                <span class="build-cat mono">E-Commerce · Academic</span>
+                <h3>Apparel Ideas</h3>
+                <div class="mini-meta"><span class="badge">Personal Project</span></div>
                 <p>
-                  This is the project where separating routes, controllers and
-                  models stopped being a diagram in a lecture and became the
-                  reason a change in one place did not break three others. The
-                  habit I still work by — design the schema before writing the
-                  first page — started here, after doing it the other way round
-                  once and paying for it.
+                  An e-commerce platform for a clothing business on Laravel's
+                  MVC structure with MySQL. Customers browse a catalogue, build
+                  a cart and check out; the owner gets full CRUD over products
+                  and the legal pages a real store needs.
                 </p>
+                <div class="build-learn">
+                  <span class="mono">What I learned</span>
+                  <p>
+                    Separating routes, controllers and models stopped being a
+                    diagram and became the reason one change did not break three
+                    other things. Designing the schema first started here.
+                  </p>
+                </div>
+                <ul class="tags">
+                  <li class="tag tag-strong">Laravel</li>
+                  <li class="tag tag-strong">MySQL</li>
+                  <li class="tag">Tailwind CSS</li>
+                  <li class="tag">Bootstrap</li>
+                </ul>
+                <div class="build-actions">
+                  <button class="shot-btn" type="button" data-gallery="Apparel Ideas — Landing"
+                    data-images="img/Apparel_Ideas/Landing.webp,img/Apparel_Ideas/Landing-1.webp,img/Apparel_Ideas/Landing-2.webp,img/Apparel_Ideas/Sign-in.webp,img/Apparel_Ideas/Sign-up.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> Landing
+                  </button>
+                  <button class="shot-btn" type="button" data-gallery="Apparel Ideas — User Side"
+                    data-images="img/Apparel_Ideas/customer/home.webp,img/Apparel_Ideas/customer/products.webp,img/Apparel_Ideas/customer/items.webp,img/Apparel_Ideas/customer/create-prod.webp,img/Apparel_Ideas/customer/edit-page.webp,img/Apparel_Ideas/customer/product-table.webp,img/Apparel_Ideas/customer/cart.webp,img/Apparel_Ideas/customer/profile-drop-down.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> User Side
+                  </button>
+                  <button class="shot-btn" type="button" data-gallery="Apparel Ideas — Legal &amp; Policy"
+                    data-images="img/Apparel_Ideas/policy/about.webp,img/Apparel_Ideas/policy/privacy-policy.webp,img/Apparel_Ideas/policy/standards.webp,img/Apparel_Ideas/policy/TOS.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> Policy
+                  </button>
+                </div>
               </div>
-
-              <p class="project-note">Preview the screenshots</p>
-              <ul class="tech-stack">
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Apparel Ideas — Landing Page"
-                    data-images="img/Apparel_Ideas/Landing.webp,
-                                 img/Apparel_Ideas/Landing-1.webp,
-                                 img/Apparel_Ideas/Landing-2.webp,
-                                 img/Apparel_Ideas/Sign-in.webp,
-                                 img/Apparel_Ideas/Sign-up.webp"
-                  >
-                    Landing Page
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Apparel Ideas — User Side"
-                    data-images="img/Apparel_Ideas/customer/home.webp,
-                                 img/Apparel_Ideas/customer/products.webp,
-                                 img/Apparel_Ideas/customer/items.webp,
-                                 img/Apparel_Ideas/customer/create-prod.webp,
-                                 img/Apparel_Ideas/customer/edit-page.webp,
-                                 img/Apparel_Ideas/customer/product-table.webp,
-                                 img/Apparel_Ideas/customer/cart.webp,
-                                 img/Apparel_Ideas/customer/profile-drop-down.webp"
-                  >
-                    User Side
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Apparel Ideas — Legal &amp; Policy Pages"
-                    data-images="img/Apparel_Ideas/policy/about.webp,
-                                 img/Apparel_Ideas/policy/privacy-policy.webp,
-                                 img/Apparel_Ideas/policy/standards.webp,
-                                 img/Apparel_Ideas/policy/TOS.webp"
-                  >
-                    Legal &amp; Policy
-                  </button>
-                </li>
-              </ul>
             </article>
 
-            <!-- Kaizen -->
             <article class="build" data-reveal>
-              <p class="build-index mono">
-                <span class="num">02</span>
-                <span>E-commerce · Laravel</span>
-              </p>
-
-              <div class="browser-frame">
-                <div class="browser-bar" aria-hidden="true">
-                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                  <span class="addr">kaizen-computer-parts · storefront</span>
+              <div class="shot">
+                <div class="shot-bar" aria-hidden="true">
+                  <i></i><i></i><i></i><span>kaizen-computer-parts</span>
                 </div>
                 <img
                   src="img/Kaizen/landing.webp"
-                  alt="Kaizen Computer Parts online store landing page with the product catalogue"
-                  width="1600"
-                  height="909"
-                  loading="lazy"
-                  decoding="async"
+                  alt="Kaizen Computer Parts storefront showing the product catalogue"
+                  width="1600" height="909" loading="lazy" decoding="async"
                 />
               </div>
-
-              <h3>Kaizen Computer Parts</h3>
-              <ul class="build-tech">
-                <li>Laravel</li>
-                <li>MySQL</li>
-                <li>Tailwind CSS</li>
-                <li>MVC</li>
-              </ul>
-
-              <div class="build-cols">
-                <div>
-                  <span class="build-col-label mono">What it is</span>
-                  <p>
-                    An online store for a computer parts retailer — two
-                    genuinely separate experiences sitting over one catalogue.
-                    Customers get a shop; staff get an operations tool. Neither
-                    is a cut-down version of the other.
-                  </p>
-                </div>
-                <div>
-                  <span class="build-col-label mono">What I built</span>
-                  <p>
-                    On the customer side: search, product pages, cart, payment,
-                    order history that distinguishes paid from unpaid, an
-                    address book and a profile. On the admin side: dashboards
-                    plus tables for users, customers, products and orders, each
-                    with its own create and edit flows.
-                  </p>
-                </div>
-              </div>
-
-              <div class="build-note">
+              <div class="build-body">
+                <span class="build-cat mono">E-Commerce · Academic</span>
+                <h3>Kaizen Computer Parts</h3>
+                <div class="mini-meta"><span class="badge">Personal Project</span></div>
                 <p>
-                  Serving two audiences from one dataset is a different problem
-                  from serving one, and it is where I first had to think about
-                  who is allowed to see what. Getting the order states right —
-                  unpaid, paid, in progress, delivered — is the same discipline
-                  I now apply to payment and delivery state in production, just
-                  with lower stakes and no third-party API to answer to.
+                  An online store for a computer parts retailer — two genuinely
+                  separate experiences over one catalogue. Customers get a shop
+                  with orders, payment and addresses; staff get an operations
+                  tool with tables for users, products and orders.
                 </p>
+                <div class="build-learn">
+                  <span class="mono">What I learned</span>
+                  <p>
+                    Two audiences over one dataset is a different problem from
+                    one. Getting order states right — unpaid, paid, in progress —
+                    is the same discipline I now apply to payment and delivery
+                    state in production.
+                  </p>
+                </div>
+                <ul class="tags">
+                  <li class="tag tag-strong">Laravel</li>
+                  <li class="tag tag-strong">MySQL</li>
+                  <li class="tag">Tailwind CSS</li>
+                </ul>
+                <div class="build-actions">
+                  <button class="shot-btn" type="button" data-gallery="Kaizen — Landing"
+                    data-images="img/Kaizen/landing.webp,img/Kaizen/sign-in.webp,img/Kaizen/sign-up.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> Landing
+                  </button>
+                  <button class="shot-btn" type="button" data-gallery="Kaizen — User Side"
+                    data-images="img/Kaizen/customer/home.webp,img/Kaizen/customer/search-bar.webp,img/Kaizen/customer/item.webp,img/Kaizen/customer/cart.webp,img/Kaizen/customer/order-details.webp,img/Kaizen/customer/order-unpaid.webp,img/Kaizen/customer/orders.webp,img/Kaizen/customer/payment.webp,img/Kaizen/customer/my-address.webp,img/Kaizen/customer/profile.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> User Side
+                  </button>
+                  <button class="shot-btn" type="button" data-gallery="Kaizen — Admin Side"
+                    data-images="img/Kaizen/admin/dashboard.webp,img/Kaizen/admin/dashboard-1.webp,img/Kaizen/admin/user-table.webp,img/Kaizen/admin/customer-table.webp,img/Kaizen/admin/product-table.webp,img/Kaizen/admin/admin-orders.webp,img/Kaizen/admin/add-product.webp,img/Kaizen/admin/edit-product.webp,img/Kaizen/admin/add-user.webp,img/Kaizen/admin/edit-user.webp,img/Kaizen/admin/edit-customer.webp,img/Kaizen/admin/admin-order-details.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> Admin
+                  </button>
+                </div>
               </div>
-
-              <p class="project-note">Preview the screenshots</p>
-              <ul class="tech-stack">
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Kaizen — Landing Page"
-                    data-images="img/Kaizen/landing.webp,
-                                 img/Kaizen/sign-in.webp,
-                                 img/Kaizen/sign-up.webp"
-                  >
-                    Landing Page
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Kaizen — User Side"
-                    data-images="img/Kaizen/customer/home.webp,
-                                 img/Kaizen/customer/search-bar.webp,
-                                 img/Kaizen/customer/item.webp,
-                                 img/Kaizen/customer/cart.webp,
-                                 img/Kaizen/customer/order-details.webp,
-                                 img/Kaizen/customer/order-unpaid.webp,
-                                 img/Kaizen/customer/orders.webp,
-                                 img/Kaizen/customer/payment.webp,
-                                 img/Kaizen/customer/my-address.webp,
-                                 img/Kaizen/customer/profile.webp"
-                  >
-                    User Side
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Kaizen — Admin Side"
-                    data-images="img/Kaizen/admin/dashboard.webp,
-                                 img/Kaizen/admin/dashboard-1.webp,
-                                 img/Kaizen/admin/user-table.webp,
-                                 img/Kaizen/admin/customer-table.webp,
-                                 img/Kaizen/admin/product-table.webp,
-                                 img/Kaizen/admin/admin-orders.webp,
-                                 img/Kaizen/admin/add-product.webp,
-                                 img/Kaizen/admin/edit-product.webp,
-                                 img/Kaizen/admin/add-user.webp,
-                                 img/Kaizen/admin/edit-user.webp,
-                                 img/Kaizen/admin/edit-customer.webp,
-                                 img/Kaizen/admin/admin-order-details.webp"
-                  >
-                    Admin Side
-                  </button>
-                </li>
-              </ul>
             </article>
 
-            <!-- Capstone -->
             <article class="build" data-reveal>
-              <p class="build-index mono">
-                <span class="num">03</span>
-                <span>IoT · Capstone</span>
-              </p>
-
-              <div class="browser-frame">
-                <div class="browser-bar" aria-hidden="true">
-                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                  <span class="addr">mdrrmo macabebe · flood alert notifier</span>
+              <div class="shot">
+                <div class="shot-bar" aria-hidden="true">
+                  <i></i><i></i><i></i><span>flood-alert-notifier</span>
                 </div>
                 <img
                   src="img/capstone/landing.webp"
-                  alt="Water Level and Flood Alert Notifier landing page for MDRRMO Macabebe"
-                  width="1600"
-                  height="1131"
-                  loading="lazy"
-                  decoding="async"
+                  alt="Water Level and Flood Alert Notifier landing page built for MDRRMO Macabebe"
+                  width="1600" height="1131" loading="lazy" decoding="async"
                 />
               </div>
-
-              <h3>Water Level &amp; Flood Alert Notifier</h3>
-              <ul class="build-tech">
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>Arduino</li>
-                <li>Node.js</li>
-                <li>Semaphore SMS API</li>
-              </ul>
-
-              <div class="build-cols">
-                <div>
-                  <span class="build-col-label mono">What it is</span>
-                  <p>
-                    My capstone, built for MDRRMO Macabebe in Pampanga: an
-                    early-warning system for river flooding in a municipality
-                    that gets it regularly. Hardware in the water, a dashboard
-                    in the office, and an SMS in the hand of anyone who needs to
-                    move.
-                  </p>
-                </div>
-                <div>
-                  <span class="build-col-label mono">What I built</span>
-                  <p>
-                    Arduino sensors report water levels into a PHP dashboard
-                    where staff manage barangays, resident records, SMS settings
-                    and historical readings. A Node.js service watches those
-                    readings and pushes warnings to registered residents through
-                    the Semaphore API once a threshold is crossed.
-                  </p>
-                </div>
-              </div>
-
-              <div class="build-note">
+              <div class="build-body">
+                <span class="build-cat mono">IoT · Capstone</span>
+                <h3>Flood Alert Notifier</h3>
+                <div class="mini-meta"><span class="badge">Personal Project</span></div>
                 <p>
-                  The first system I built where software talked to hardware and
-                  to a third party at the same time, and the first where being
-                  wrong had consequences past a bad user experience. Threshold
-                  logic, delivery confirmation and a durable record of what was
-                  sent all mattered, because someone might act on it. It was
-                  presented to and handed over to the municipality.
+                  My capstone for MDRRMO Macabebe, Pampanga. Arduino sensors
+                  report river levels into a PHP dashboard where staff manage
+                  barangays, residents and thresholds; a Node.js service pushes
+                  SMS warnings through the Semaphore API when a level is crossed.
                 </p>
+                <div class="build-learn">
+                  <span class="mono">What I learned</span>
+                  <p>
+                    My first system where software talked to hardware and a third
+                    party at once, and where being wrong mattered beyond a bad
+                    user experience. Delivery confirmation and a durable record
+                    of what was sent were the point. Handed over to the
+                    municipality.
+                  </p>
+                </div>
+                <ul class="tags">
+                  <li class="tag tag-strong">PHP</li>
+                  <li class="tag tag-strong">MySQL</li>
+                  <li class="tag">Arduino</li>
+                  <li class="tag">Node.js</li>
+                  <li class="tag">Semaphore API</li>
+                </ul>
+                <div class="build-actions">
+                  <button class="shot-btn" type="button" data-gallery="Flood Alert — Landing"
+                    data-images="img/capstone/landing.webp,img/capstone/landing-registration.webp,img/capstone/sign-in.webp,img/capstone/sign-up.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> Landing
+                  </button>
+                  <button class="shot-btn" type="button" data-gallery="Flood Alert — Admin"
+                    data-images="img/capstone/admin/dashboard.webp,img/capstone/admin/water-level.webp,img/capstone/admin/barangay.webp,img/capstone/admin/residents.webp,img/capstone/admin/sms-settings.webp,img/capstone/admin/records.webp,img/capstone/admin/residents-form.webp,img/capstone/admin/profile.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> Admin
+                  </button>
+                  <button class="shot-btn" type="button" data-gallery="Flood Alert — Hardware &amp; Awards"
+                    data-images="img/capstone/hardware-achievements/capstone-book.webp,img/capstone/hardware-achievements/hardware-1.webp,img/capstone/hardware-achievements/hardware-2.webp,img/capstone/hardware-achievements/sms.webp,img/capstone/hardware-achievements/achievement.webp,img/capstone/hardware-achievements/macabebe.webp">
+                    <svg aria-hidden="true"><use href="#i-image" /></svg> Hardware
+                  </button>
+                </div>
               </div>
-
-              <p class="project-note">Preview the screenshots</p>
-              <ul class="tech-stack">
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Flood Alert Notifier — Landing Page"
-                    data-images="img/capstone/landing.webp,
-                                 img/capstone/landing-registration.webp,
-                                 img/capstone/sign-in.webp,
-                                 img/capstone/sign-up.webp"
-                  >
-                    Landing Page
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Flood Alert Notifier — Admin"
-                    data-images="img/capstone/admin/dashboard.webp,
-                                 img/capstone/admin/water-level.webp,
-                                 img/capstone/admin/barangay.webp,
-                                 img/capstone/admin/residents.webp,
-                                 img/capstone/admin/sms-settings.webp,
-                                 img/capstone/admin/records.webp,
-                                 img/capstone/admin/residents-form.webp,
-                                 img/capstone/admin/profile.webp"
-                  >
-                    Admin
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    class="tech-tab"
-                    data-gallery-label="Flood Alert Notifier — Hardware &amp; Achievements"
-                    data-images="img/capstone/hardware-achievements/capstone-book.webp,
-                                 img/capstone/hardware-achievements/hardware-1.webp,
-                                 img/capstone/hardware-achievements/hardware-2.webp,
-                                 img/capstone/hardware-achievements/sms.webp,
-                                 img/capstone/hardware-achievements/achievement.webp,
-                                 img/capstone/hardware-achievements/macabebe.webp"
-                  >
-                    Hardware &amp; Awards
-                  </button>
-                </li>
-              </ul>
             </article>
           </div>
         </div>
       </section>
-      <!------------------------ Personal Projects (end) ------------------------->
 
-      <!------------------------------ Contact (start) --------------------------->
-      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
-        <div class="container">
-          <div class="section-head" data-reveal>
-            <p class="section-eyebrow mono">
-              <span class="section-index">05</span> <span>Contact</span>
-            </p>
-            <h2 id="contact-heading" class="contact-headline">
-              Let's build something worth shipping.
+      <!-- ============================= CONTACT ============================= -->
+      <section class="section section-tinted" id="contact" aria-labelledby="contact-h">
+        <div class="wrap">
+          <div data-reveal>
+            <span class="sec-eyebrow mono">Contact</span>
+            <h2 class="contact-head" id="contact-h">
+              Have a system to build, improve, or scale?
             </h2>
-            <p class="contact-intro">
-              I'm open to full stack roles and freelance work. If you have a
-              project, a role, or just a question about something on this
-              page — my inbox is open.
+            <p class="contact-sub">
+              Let's discuss the business problem behind it. I am open to
+              full-stack roles and freelance work, and happy to talk through
+              anything on this page.
             </p>
           </div>
 
-          <div class="contact-list" data-reveal-stagger>
-            <a class="contact-row" href="mailto:adriandelrosario180112@gmail.com">
-              <span class="contact-label mono">Email</span>
-              <span class="contact-value">adriandelrosario180112@gmail.com</span>
-              <span class="arrow" aria-hidden="true">↗</span>
+          <div class="contact-grid" data-reveal>
+            <a class="contact-card" href="mailto:adriandelrosario180112@gmail.com">
+              <svg aria-hidden="true"><use href="#i-mail" /></svg>
+              <div>
+                <b>Email</b>
+                <small>adriandelrosario180112@gmail.com</small>
+              </div>
             </a>
-            <a
-              class="contact-row"
-              href="https://www.linkedin.com/in/del-rosario-adrian-d-880464286"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="contact-label mono">LinkedIn</span>
-              <span class="contact-value">del-rosario-adrian-d</span>
-              <span class="arrow" aria-hidden="true">↗</span>
+            <a class="contact-card" href="https://www.linkedin.com/in/del-rosario-adrian-d-880464286" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
+              <div>
+                <b>LinkedIn</b>
+                <small>del-rosario-adrian-d</small>
+              </div>
             </a>
-            <a
-              class="contact-row"
-              href="https://github.com/ian1219"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="contact-label mono">GitHub</span>
-              <span class="contact-value">github.com/ian1219</span>
-              <span class="arrow" aria-hidden="true">↗</span>
+            <a class="contact-card" href="https://github.com/ian1219" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true"><use href="#i-github" /></svg>
+              <div>
+                <b>GitHub</b>
+                <small>github.com/ian1219</small>
+              </div>
             </a>
-            <a
-              class="contact-row"
-              href="https://www.facebook.com/share/1FSU6kgRNL/?mibextid=wwXIfr"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span class="contact-label mono">Facebook</span>
-              <span class="contact-value">ian.delrosario</span>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="contact-row" href="tel:+639368214854">
-              <span class="contact-label mono">Phone</span>
-              <span class="contact-value">0936&nbsp;821&nbsp;4854</span>
-              <span class="arrow" aria-hidden="true">↗</span>
-            </a>
+          </div>
+
+          <div class="contact-actions" data-reveal>
+            <button class="btn btn-outline" type="button" id="copy-email"
+              data-email="adriandelrosario180112@gmail.com">
+              <svg aria-hidden="true"><use href="#i-copy" /></svg>
+              <span>Copy Email</span>
+            </button>
           </div>
         </div>
       </section>
-      <!------------------------------ Contact (end) ----------------------------->
     </main>
 
-    <!-- ============== Al Qaysar — case study ============== -->
-    <div
-      id="alQaysarModal"
-      class="custom-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="alQaysarModalTitle"
-      inert
-    >
-      <div class="modal-content-box">
-        <div class="modal-head">
-          <div class="modal-head-text">
-            <span class="modal-eyebrow mono">Case study · Built from scratch</span>
-            <h3 id="alQaysarModalTitle">Al Qaysar Restaurant</h3>
-          </div>
-          <button class="modal-close" type="button" aria-label="Close dialog">&times;</button>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>© <span id="year">2026</span> Adrian Del Rosario</p>
+        <div class="footer-links">
+          <a class="icon-link" href="https://github.com/ian1219" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg aria-hidden="true"><use href="#i-github" /></svg>
+          </a>
+          <a class="icon-link" href="https://www.linkedin.com/in/del-rosario-adrian-d-880464286" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg aria-hidden="true"><use href="#i-linkedin" /></svg>
+          </a>
+          <a class="icon-link" href="mailto:adriandelrosario180112@gmail.com" aria-label="Email">
+            <svg aria-hidden="true"><use href="#i-mail" /></svg>
+          </a>
         </div>
-
-        <div class="modal-body">
-
-        <dl class="modal-facts">
-          <div><dt>Type</dt><dd>Online ordering &amp; delivery platform</dd></div>
-          <div><dt>Client</dt><dd>Al Qaysar Restaurant &amp; Café, Manila — halal Middle Eastern, est. 2015</dd></div>
-          <div><dt>Built at</dt><dd>AP Creative Advertising Corp</dd></div>
-          <div><dt>Stack</dt><dd>Next.js · Prisma · PostgreSQL · Tailwind · Vercel</dd></div>
-          <div>
-            <dt>Live</dt>
-            <dd>
-              <a href="https://www.alqaysar-restaurant.com/" target="_blank" rel="noopener noreferrer"
-                >alqaysar-restaurant.com</a
-              >
-            </dd>
-          </div>
-        </dl>
-
-        <p>
-          The restaurant had been trading since 2015 with no way to take orders
-          online. The brief was not a menu page — it was a working delivery
-          business: take the order, take the money, get a rider to the door.
-        </p>
-
-        <h4>The order workflow</h4>
-        <ol class="workflow">
-          <li>
-            <strong>Browse the menu</strong>
-            24+ categorised sections — appetisers, grills, mains, pasta,
-            breakfast, beverages — with sorting by price, newest and
-            popularity, a daily deals section, and favourites for signed-in
-            customers.
-          </li>
-          <li>
-            <strong>Build the order</strong>
-            Items go into a cart. Customers can create an account, which is also
-            where the free-delivery incentive is applied.
-          </li>
-          <li>
-            <strong>Pay through the gateway</strong>
-            Checkout runs through an integrated payment gateway API. The order
-            is only treated as confirmed once payment clears — payment state and
-            order state are modelled separately so the two can never drift.
-          </li>
-          <li>
-            <strong>Dispatch to Lalamove</strong>
-            A confirmed order is handed to <strong>Lalamove</strong> through
-            their API, which books the courier and handles the delivery leg. The
-            site owns the order; Lalamove owns the ride.
-          </li>
-          <li>
-            <strong>Reservations, on their own track</strong>
-            Dine-in guests book a table through a separate flow on the same
-            site, with its own data model independent of orders.
-          </li>
-        </ol>
-
-        <h4>Third-party integrations</h4>
-        <ul class="modal-tags">
-          <li>Payment gateway API</li>
-          <li>Lalamove delivery API</li>
-          <li>WhatsApp</li>
-          <li>Vercel Blob storage</li>
-        </ul>
-
-        <p class="modal-callout">
-          This is a transactional system, not a menu page. Money moves through
-          it and a third-party courier is dispatched by it — which means real
-          state to manage: payment status, order status, and a handoff between
-          them that has to be right every time.
-        </p>
-
-        <h4>Also in the build</h4>
-        <ul>
-          <li>Customer accounts, sign-in and sign-up</li>
-          <li>Favourites / wishlist</li>
-          <li>Daily deals and menu sorting</li>
-          <li>Table reservation system</li>
-          <li>WhatsApp channel for direct enquiries</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============== LOBO — case study ============== -->
-    <div
-      id="loboModal"
-      class="custom-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="loboModalTitle"
-      inert
-    >
-      <div class="modal-content-box">
-        <div class="modal-head">
-          <div class="modal-head-text">
-            <span class="modal-eyebrow mono">Case study · Built from scratch</span>
-            <h3 id="loboModalTitle">LOBO Superclub &amp; VIP JTV</h3>
-          </div>
-          <button class="modal-close" type="button" aria-label="Close dialog">&times;</button>
-        </div>
-
-        <div class="modal-body">
-
-        <dl class="modal-facts">
-          <div><dt>Type</dt><dd>Reservation platform with admin dashboard &amp; promoter programme</dd></div>
-          <div><dt>Client</dt><dd>LOBO Superclub &amp; VIP JTV — 1917 Adriatico St, Malate, Manila</dd></div>
-          <div><dt>Built at</dt><dd>AP Creative Advertising Corp</dd></div>
-          <div><dt>Stack</dt><dd>Next.js · Prisma · Role-based auth · Tailwind · Vercel</dd></div>
-          <div>
-            <dt>Live</dt>
-            <dd>
-              <a href="https://www.lobosuperclub.com/" target="_blank" rel="noopener noreferrer"
-                >lobosuperclub.com</a
-              >
-            </dd>
-          </div>
-        </dl>
-
-        <p>
-          A premium superclub and VIP lounge open 8PM–8AM. The entire business
-          runs on table reservations, so the site could not just advertise the
-          venue — it had to be the system that operates it. It is really three
-          applications sharing one data model.
-        </p>
-
-        <h4>Three systems in one</h4>
-        <ol class="workflow">
-          <li>
-            <strong>The guest side</strong>
-            Browse VIP packages, the bar area and the events calendar, view the
-            gallery and location, and reserve a table. This is the only part a
-            visitor ever sees — and the smallest part of the build.
-          </li>
-          <li>
-            <strong>The admin dashboard</strong>
-            Staff see every reservation as it lands and manage it from there,
-            along with packages, events and site content. This is what the venue
-            actually runs its night from: who is booked, for which table, under
-            which package.
-          </li>
-          <li>
-            <strong>The promoter programme</strong>
-            Promoters register for their own accounts, invite guests, and earn
-            commission of up to <strong>12%</strong> on the business they bring
-            in. Every invited guest and the booking that results is attributed
-            back to the promoter who brought them, so commission is calculated
-            from real data rather than counted by hand.
-          </li>
-        </ol>
-
-        <h4>What that requires underneath</h4>
-        <ul>
-          <li>
-            <strong>Three account types</strong> — guest, promoter and admin —
-            with role-based access, so each only sees and does what it should.
-          </li>
-          <li>
-            <strong>A reservation model</strong> covering tables, packages,
-            minimum spend, dates and status.
-          </li>
-          <li>
-            <strong>An attribution chain</strong>: promoter → invited guest →
-            booking → commission. Every link has to hold for the payout to be
-            correct.
-          </li>
-          <li>
-            <strong>An admin surface</strong> over all of it, built for staff
-            working at speed during service.
-          </li>
-        </ul>
-
-        <p class="modal-callout">
-          The public pages are the smallest part of this build. Underneath sit
-          three account types, a reservation data model, and a commission
-          attribution chain — the kind of thing that has to reconcile correctly
-          because somebody gets paid from it.
-        </p>
-
-        <h4>Also in the build</h4>
-        <ul>
-          <li>Events calendar and nightly programming</li>
-          <li>VIP table and bottle package browsing</li>
-          <li>Venue gallery and dedicated bar area page</li>
-          <li>Google Maps integration and WhatsApp support channel</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== AP Creative Modal ==================== -->
-    <div
-      id="apCreativeModal"
-      class="custom-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="apCreativeModalTitle"
-      inert
-    >
-      <div class="modal-content-box">
-        <div class="modal-head">
-          <div class="modal-head-text">
-            <span class="modal-eyebrow mono">Current role</span>
-            <h3 id="apCreativeModalTitle">AP Creative Advertising Corp</h3>
-          </div>
-          <button class="modal-close" type="button" aria-label="Close dialog">&times;</button>
-        </div>
-
-        <div class="modal-body">
-
-        <dl class="modal-facts">
-          <div><dt>Position</dt><dd>Full Stack Developer</dd></div>
-          <div><dt>Period</dt><dd>March 2026 – Present</dd></div>
-          <div><dt>Location</dt><dd>Century Diamond Tower, Makati City</dd></div>
-          <div>
-            <dt>Website</dt>
-            <dd>
-              <a href="https://apcreativecorp.com/en" target="_blank" rel="noopener noreferrer"
-                >apcreativecorp.com</a
-              >
-            </dd>
-          </div>
-        </dl>
-
-        <p>
-          A creative agency delivering digital marketing, website design and
-          SEO, events, exhibitions, brand activation and LED billboard
-          advertising for brands across the Philippines. All four of the live
-          systems on this site were built or are maintained here.
-        </p>
-
-        <h4>What I do</h4>
-        <ul>
-          <li>
-            Build client systems from scratch in <strong>Next.js</strong> and
-            <strong>Prisma</strong> — ordering, delivery, reservation and
-            catalogue platforms.
-          </li>
-          <li>
-            Integrate third-party services: payment gateway APIs for checkout,
-            <strong>Lalamove</strong> for courier dispatch.
-          </li>
-          <li>
-            Build role-based admin dashboards and promoter/commission systems
-            behind the public site.
-          </li>
-          <li>
-            Design and refine database schemas, and write the API routes and
-            server actions on top of them.
-          </li>
-          <li>
-            Maintain and extend inherited client sites: new features, fixes,
-            performance and technical SEO.
-          </li>
-          <li>
-            Deploy and monitor production sites on Vercel, working with
-            designers and the marketing team on requirements.
-          </li>
-        </ul>
-
-        <h4>Live work — all four at AP Creative</h4>
-        <ul>
-          <li>
-            <a href="https://www.alqaysar-restaurant.com/" target="_blank" rel="noopener noreferrer"
-              >Al Qaysar Restaurant</a
-            >
-            — built from scratch · ordering, payment gateway, Lalamove dispatch
-          </li>
-          <li>
-            <a href="https://www.lobosuperclub.com/" target="_blank" rel="noopener noreferrer"
-              >LOBO Superclub &amp; VIP JTV</a
-            >
-            — built from scratch · reservations, admin dashboard, promoter
-            commissions
-          </li>
-          <li>
-            <a href="https://www.progroup.com.ph/" target="_blank" rel="noopener noreferrer"
-              >Pro Group E-Bike</a
-            >
-            — maintained &amp; enhanced
-          </li>
-          <li>
-            <a href="https://neonnightsbarclub.com/" target="_blank" rel="noopener noreferrer"
-              >Neon Nights Bar Club</a
-            >
-            — maintained &amp; enhanced
-          </li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== NTT Modal ==================== -->
-    <div
-      id="nttModal"
-      class="custom-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="nttModalTitle"
-      inert
-    >
-      <div class="modal-content-box">
-        <div class="modal-head">
-          <div class="modal-head-text">
-            <span class="modal-eyebrow mono">Previous role</span>
-            <h3 id="nttModalTitle">NTT Limited Philippines Branch</h3>
-          </div>
-          <button class="modal-close" type="button" aria-label="Close dialog">&times;</button>
-        </div>
-
-        <div class="modal-body">
-
-        <dl class="modal-facts">
-          <div><dt>Position</dt><dd>Junior Fullstack Developer</dd></div>
-          <div><dt>Period</dt><dd>March – July 2025</dd></div>
-          <div>
-            <dt>Location</dt>
-            <dd>CINQ Bldg, Metropoli Residenza, Quezon City</dd>
-          </div>
-        </dl>
-
-        <p>
-          Our team built both the <strong>Player Side</strong> and
-          <strong>Back Office</strong> systems for a casino game platform from
-          the ground up, focusing on performance, scalability and security.
-        </p>
-
-        <h4>What I did</h4>
-        <ul>
-          <li>
-            Developed backend logic and RESTful APIs in Laravel with clean,
-            maintainable code.
-          </li>
-          <li>Built interactive, responsive frontend interfaces in React.js.</li>
-          <li>
-            Wrote <strong>Go</strong> scripts for data fetching and service
-            integration.
-          </li>
-          <li>
-            Supported database design and structure for scalable application
-            development.
-          </li>
-          <li>
-            Took part in code reviews and enforced clean architecture and OOP
-            design patterns.
-          </li>
-          <li>
-            Worked closely with designers, QA and other developers to keep the
-            system consistent.
-          </li>
-        </ul>
-
-        <h4>Notable contributions</h4>
-        <ul>
-          <li>Contributed to the initial system architecture from scratch.</li>
-          <li>
-            Assisted with database optimization and schema refinement for better
-            data handling.
-          </li>
-          <li>
-            Improved the frontend interface for smoother interaction and a more
-            modern design flow.
-          </li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== Golden Arrow Modal ==================== -->
-    <div
-      id="goldenArrowModal"
-      class="custom-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="goldenArrowModalTitle"
-      inert
-    >
-      <div class="modal-content-box">
-        <div class="modal-head">
-          <div class="modal-head-text">
-            <span class="modal-eyebrow mono">First developer role</span>
-            <h3 id="goldenArrowModalTitle">Golden Arrow Digital Solutions</h3>
-          </div>
-          <button class="modal-close" type="button" aria-label="Close dialog">&times;</button>
-        </div>
-
-        <div class="modal-body">
-
-        <dl class="modal-facts">
-          <div><dt>Position</dt><dd>Junior PHP Programmer</dd></div>
-          <div><dt>Period</dt><dd>January 2024 – February 2025</dd></div>
-          <div>
-            <dt>Location</dt>
-            <dd>331 Building, Sen. Gil Puyat Ave. Ext., Makati City</dd>
-          </div>
-        </dl>
-
-        <p>
-          My main brief was to improve and optimize the company's existing web
-          platform — updating legacy code, raising performance, and smoothing
-          out functionality across every module.
-        </p>
-
-        <h4>What I did</h4>
-        <ul>
-          <li>
-            Updated and enhanced the existing web platform for better
-            performance and maintainability.
-          </li>
-          <li>
-            Tested APIs with Postman and wrote both unit and feature tests to
-            keep the codebase stable.
-          </li>
-          <li>
-            Refactored old code to clean, optimized standards, cutting bugs and
-            redundancy.
-          </li>
-          <li>
-            Developed RESTful APIs from scratch using OOP and established design
-            patterns.
-          </li>
-          <li>
-            Handled frontend tasks despite a backend assignment, keeping
-            integration and UI/UX consistent.
-          </li>
-          <li>
-            Collaborated with a team of five developers to deliver structured,
-            efficient systems.
-          </li>
-        </ul>
-
-        <h4>Achievements</h4>
-        <ul>
-          <li>
-            Refactored multiple legacy modules into cleaner, more efficient
-            code.
-          </li>
-          <li>Improved overall system responsiveness and maintainability.</li>
-          <li>
-            Led the frontend implementation for key components, outside my main
-            role.
-          </li>
-        </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- ==================== Project Screenshot Gallery ==================== -->
-    <div
-      id="imageModal"
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Project screenshots"
-      inert
-    >
-      <div class="lightbox">
-        <div class="lightbox-bar">
-          <p class="lightbox-title mono" id="lightbox-title"></p>
-          <p class="slider-counter mono" id="slider-counter" aria-live="polite"></p>
-          <button class="modal-gallery-close" type="button" aria-label="Close gallery">
-            &times;
-          </button>
-        </div>
-
-        <div class="lightbox-stage">
-          <button class="prev" type="button" aria-label="Previous screenshot">
-            &#10094;
-          </button>
-          <div class="slider">
-            <!-- src/alt are set by script.js when a gallery opens -->
-            <img
-              id="slider-img"
-              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-              alt=""
-            />
-          </div>
-          <button class="next" type="button" aria-label="Next screenshot">
-            &#10095;
-          </button>
-        </div>
-
-        <!-- Thumbnail rail, populated by script.js -->
-        <div class="lightbox-thumbs" id="lightbox-thumbs" aria-label="Jump to screenshot"></div>
-      </div>
-    </div>
-
-    <!------------------------------------ Footer ------------------------------------>
-    <footer class="footer-section">
-      <div class="container footer-inner">
-        <p>© <span id="footer-year">2026</span> Adrian Del Rosario</p>
-
-        <div class="footer-icons">
-          <a
-            href="https://www.linkedin.com/in/del-rosario-adrian-d-880464286"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer-icon"
-            aria-label="LinkedIn"
-            ><i class="fab fa-linkedin-in" aria-hidden="true"></i
-          ></a>
-          <a
-            href="https://github.com/ian1219"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer-icon"
-            aria-label="GitHub"
-            ><i class="fab fa-github" aria-hidden="true"></i
-          ></a>
-          <a
-            href="mailto:adriandelrosario180112@gmail.com"
-            class="footer-icon"
-            aria-label="Email"
-            ><i class="fas fa-envelope" aria-hidden="true"></i
-          ></a>
-          <a
-            href="https://www.facebook.com/share/1FSU6kgRNL/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="footer-icon"
-            aria-label="Facebook"
-            ><i class="fab fa-facebook-f" aria-hidden="true"></i
-          ></a>
-          <a href="tel:+639368214854" class="footer-icon" aria-label="Phone"
-            ><i class="fas fa-phone" aria-hidden="true"></i
-          ></a>
-        </div>
-
         <p>Built from scratch — HTML, CSS, JavaScript</p>
       </div>
     </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script src="script.js?v=20260728" defer></script>
+    <!-- ============================ DIALOGS ============================ -->
+    <div class="dialog" id="d-alqaysar" role="dialog" aria-modal="true" aria-labelledby="d-alqaysar-t" inert>
+      <div class="dialog-panel">
+        <div class="dialog-head">
+          <div>
+            <span class="mono">Case study · Built from scratch</span>
+            <h3 id="d-alqaysar-t">Al Qaysar Restaurant</h3>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Close dialog">
+            <svg aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <div class="dialog-body">
+          <dl class="d-facts">
+            <div><dt>Category</dt><dd>Ordering &amp; delivery platform</dd></div>
+            <div><dt>Client</dt><dd>Al Qaysar Restaurant &amp; Café, Manila — halal Middle Eastern, est. 2015</dd></div>
+            <div><dt>Built at</dt><dd>AP Creative Advertising Corp</dd></div>
+            <div><dt>Stack</dt><dd>Next.js 16 · React 19 · Prisma 7 · PostgreSQL · Better Auth · Xendit · Lalamove API · Vercel Blob · Tailwind CSS · Vercel</dd></div>
+            <div><dt>Live</dt><dd><a href="https://www.alqaysar-restaurant.com/" target="_blank" rel="noopener noreferrer">alqaysar-restaurant.com</a></dd></div>
+          </dl>
+
+          <h4 class="d-h">The business problem</h4>
+          <p>
+            Al Qaysar has traded since 2015 and was already selling online — on
+            foodpanda and Grab. The problem was what those platforms cost.
+            Aggregator commission runs roughly <strong>35–40% on every
+            order</strong>, which either comes out of the margin or gets priced
+            into the menu, so the customer pays more for the same food and the
+            restaurant owns none of the relationship.
+          </p>
+          <p>
+            Anything ordered outside those apps was coordinated by hand between
+            the customer, the kitchen and whoever could take the food out.
+          </p>
+          <p>
+            So the brief was not a website with a menu on it. It was a direct
+            channel the restaurant owns and can price below the aggregators —
+            with the same convenience customers now expect from foodpanda and
+            Grab. That means the whole machinery: take the order, take payment
+            for it, and get a courier to the door without anyone reconciling the
+            three by hand.
+          </p>
+
+          <h4 class="d-h">The order workflow</h4>
+          <ol class="d-flow">
+            <li>
+              <b>Customer builds an order</b>
+              <p>
+                Browses the menu by category with sorting, best-sellers,
+                recommended items and favourites, adds to cart with per-item
+                instructions, and chooses delivery or pickup. Guests can check
+                out for pickup; delivery requires an account, because the
+                delivery fee is tied to a saved, verified address.
+              </p>
+            </li>
+            <li>
+              <b>Delivery is quoted before payment</b>
+              <p>
+                For delivery orders the saved address is sent to Lalamove for a
+                live quotation, so the customer sees the real courier fee at
+                checkout rather than an estimate. The quotation is short-lived,
+                so checkout re-verifies it server-side against the address on
+                file and takes the fee from Lalamove's response — a client that
+                tampers with the fee is rejected.
+              </p>
+            </li>
+            <li>
+              <b>Order and payment are created together, then handed to Xendit</b>
+              <p>
+                One database transaction writes the order, its line items with
+                price snapshots, the delivery address snapshot and a PENDING
+                payment record. The customer is redirected to a Xendit invoice
+                for their chosen rail — GCash, bank transfer or card. If the
+                gateway will not open a session the order is rolled back rather
+                than left orphaned. A QUOTED delivery booking is recorded at this
+                point: the quote is held, but no rider has been requested.
+              </p>
+            </li>
+            <li>
+              <b>Xendit webhook confirms the money</b>
+              <p>
+                The webhook is authenticated by callback token, tolerates several
+                payload shapes, and checks the paid amount against the order
+                total before accepting it. On success the payment becomes PAID and
+                the order becomes CONFIRMED. Expired and failed invoices are
+                recorded without ever downgrading a payment already marked paid.
+              </p>
+            </li>
+            <li>
+              <b>The kitchen starts preparing — and that books the rider</b>
+              <p>
+                A confirmed order reaches the admin dashboard already settled, so
+                approval is a question of kitchen capacity rather than chasing
+                payment. When staff start preparation, the same action places the
+                Lalamove order against the held quotation. Cleared payment is the
+                <em>guard</em> on that action, not the trigger for it — the
+                restaurant decides when a rider is called, and a failed booking
+                surfaces in the dashboard with a retry.
+              </p>
+            </li>
+            <li>
+              <b>Lalamove webhooks own the delivery leg</b>
+              <p>
+                Rider status — assigning driver, on-going, picked up, completed,
+                rejected, expired — is written to the delivery booking as the
+                single source of truth. The customer-facing kitchen status is
+                derived from it in application code and never copied onto the
+                order row, so the two cannot drift. The customer tracks Payment
+                confirmed → Finding rider → Rider assigned → Picked up → Out for
+                delivery → Delivered.
+              </p>
+            </li>
+            <li>
+              <b>Pickup skips the courier entirely</b>
+              <p>
+                Pickup orders run the same payment path but no booking is ever
+                created, and the customer sees a different timeline: Order
+                Confirmed → Restaurant Preparing → Ready for Pickup → Completed.
+              </p>
+            </li>
+          </ol>
+
+          <p>
+            Table reservations are handled off-platform through a booking form,
+            deliberately — dine-in never touches the order, payment or delivery
+            models.
+          </p>
+
+          <h4 class="d-h">My responsibilities</h4>
+          <ul class="d-list">
+            <li>Database architecture in Prisma for menu, carts, orders, payments, deliveries and addresses</li>
+            <li>Xendit integration: invoice creation, webhook authentication, amount verification, expiry and failure handling</li>
+            <li>Lalamove integration: quotation, server-side quote verification, order placement, webhook ingestion, retry and cancel</li>
+            <li>Role-based admin dashboard — orders, payments, delivery, products, categories, banners, customers, and reports with PDF/XLSX export</li>
+            <li>Better Auth with roles and permissions, account lockout, and guest or account checkout</li>
+            <li>Storefront: menu, cart, checkout, order tracking, and an address book with map pinning</li>
+            <li>Store availability controls, so the restaurant can stop taking orders on schedule or on demand</li>
+            <li>Deployment on Vercel and ongoing maintenance</li>
+          </ul>
+
+          <p class="d-note">
+            Money moves through this system and a third-party courier is
+            dispatched by it. The hard part was not either integration — it was
+            deciding what each one is allowed to decide. Payment state, kitchen
+            state and courier state are three separate records with one owner
+            each, and the handoffs between them are explicit.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="d-lobo" role="dialog" aria-modal="true" aria-labelledby="d-lobo-t" inert>
+      <div class="dialog-panel">
+        <div class="dialog-head">
+          <div>
+            <span class="mono">Case study · Built from scratch</span>
+            <h3 id="d-lobo-t">LOBO Superclub &amp; VIP JTV</h3>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Close dialog">
+            <svg aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <div class="dialog-body">
+          <dl class="d-facts">
+            <div><dt>Category</dt><dd>Reservation &amp; promoter platform</dd></div>
+            <div><dt>Client</dt><dd>LOBO Superclub &amp; VIP JTV — Malate, Manila</dd></div>
+            <div><dt>Built at</dt><dd>AP Creative Advertising Corp</dd></div>
+            <div><dt>Stack</dt><dd>Next.js · React · TypeScript · Prisma · PostgreSQL (Neon) · JWT · Zod · Vercel Blob · Resend · Tailwind CSS · Vercel</dd></div>
+            <div><dt>Live</dt><dd><a href="https://www.lobosuperclub.com/" target="_blank" rel="noopener noreferrer">lobosuperclub.com</a></dd></div>
+          </dl>
+
+          <h4 class="d-h">The business problem</h4>
+          <p>
+            Nearly all of the venue's revenue arrives as a table reservation, and
+            promoters bring a large share of the guests. Both were tracked by
+            hand — bookings scattered across message threads, and promoter
+            commission reconciled manually at the end of each week.
+          </p>
+          <p>
+            Manual reconciliation is the real problem: commission has to be
+            correct because somebody gets paid from it, and a hand-tallied number
+            is impossible to audit. The site had to become the system the venue
+            is operated from.
+          </p>
+
+          <h4 class="d-h">The reservation and commission flow</h4>
+          <ol class="d-flow">
+            <li>
+              <b>Guest reserves a table</b>
+              <p>
+                Browses VIP packages, the bar-area map and the events calendar,
+                then books — optionally through a promoter's invitation code,
+                which is validated server-side.
+              </p>
+            </li>
+            <li>
+              <b>Table is allocated</b>
+              <p>
+                Staff see the reservation land in the dashboard and assign the
+                actual table, zone and package tier against live availability.
+              </p>
+            </li>
+            <li>
+              <b>Guest is attributed to the promoter</b>
+              <p>
+                The invited guest stays linked to the promoter who brought them,
+                and that link survives later changes to the booking.
+              </p>
+            </li>
+            <li>
+              <b>Cashier settles the bill</b>
+              <p>
+                POS subtotals are entered at settlement. The system separates
+                regular from special orders and strips the 12% VAT to derive the
+                true net figure.
+              </p>
+            </li>
+            <li>
+              <b>Commission is calculated on the VAT-exclusive base</b>
+              <p>
+                <code>commission = (regular orders ÷ 1.12) × rate</code>, where
+                the rate is 7%, rising to 10% once the promoter's cumulative base
+                passes ₱200,000. A super-admin can override the rate per
+                promoter.
+              </p>
+            </li>
+            <li>
+              <b>Payout reporting</b>
+              <p>
+                Earnings move through PENDING → APPROVED → PAID, so every peso
+                traces back to a specific settled transaction.
+              </p>
+            </li>
+          </ol>
+
+          <h4 class="d-h">The guest list and door flow</h4>
+          <ol class="d-flow">
+            <li>
+              <b>Guest registers</b>
+              <p>
+                Through a promoter's invitation link. Duplicate emails and mobile
+                numbers are rejected globally.
+              </p>
+            </li>
+            <li>
+              <b>A signed QR token is issued</b>
+              <p>
+                With an expiry policy tied to the event or the club's operating
+                hours.
+              </p>
+            </li>
+            <li>
+              <b>Door staff scan the QR</b>
+              <p>
+                Using the in-browser camera scanner, and the guest is checked in
+                against the correct club night.
+              </p>
+            </li>
+          </ol>
+
+          <p class="d-note">
+            A club night runs 8PM–8AM, so “today” crosses midnight. Every date
+            rule in the system resolves against the operating night, not the
+            calendar day.
+          </p>
+
+          <h4 class="d-h">Roles and access</h4>
+          <ul class="d-list">
+            <li><strong>Public guest</strong> — no account. Books a table or registers for the guest list.</li>
+            <li><strong>Promoter</strong> — own login and session. Invitation codes, referral attribution, earnings visibility, payout details.</li>
+            <li>
+              <strong>Staff</strong> — four roles behind a 25-permission matrix:
+              <ul class="d-list d-sublist">
+                <li><strong>Receptionist</strong> — reservations and guest list</li>
+                <li><strong>Cashier</strong> — payment settlement and processing</li>
+                <li><strong>Manager</strong> — operations, promoters, content</li>
+                <li><strong>Super Admin</strong> — staff accounts, settings, commission overrides</li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            Staff and promoters run on separate cookies and separate session
+            systems, so a signed-in promoter can never reach staff surfaces, and
+            vice versa.
+          </p>
+
+          <h4 class="d-h">My responsibilities</h4>
+          <ul class="d-list">
+            <li>Data architecture — 29 models covering reservations, tables, payments, promoters, guests and customers</li>
+            <li>Two independent authentication systems with edge session validation and a per-route permission matrix</li>
+            <li>Commission engine: VAT-exclusive base, tiered rates, manual overrides, payout lifecycle</li>
+            <li>QR guest list end to end — token issuance, expiry policy, camera check-in</li>
+            <li>Admin dashboard: floor plan, table board, cashier, customer CRM, promoter administration</li>
+            <li>Content management so staff edit packages, drinks, events and gallery without a deploy</li>
+            <li>Multilingual public site and performance work; deployed on Vercel with Neon Postgres</li>
+          </ul>
+
+          <p class="d-note">
+            The public pages are the smallest part of this build. Underneath sit
+            two authentication systems, a 25-permission role matrix, and a
+            commission chain that has to reconcile against VAT-exclusive
+            transaction records — because somebody gets paid from it.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="d-apcreative" role="dialog" aria-modal="true" aria-labelledby="d-ap-t" inert>
+      <div class="dialog-panel">
+        <div class="dialog-head">
+          <div>
+            <span class="mono">Current role</span>
+            <h3 id="d-ap-t">AP Creative Advertising Corp</h3>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Close dialog">
+            <svg aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <div class="dialog-body">
+          <dl class="d-facts">
+            <div><dt>Position</dt><dd>Full-Stack Developer</dd></div>
+            <div><dt>Period</dt><dd>March 2026 – Present</dd></div>
+            <div><dt>Location</dt><dd>Century Diamond Tower, Makati City</dd></div>
+            <div><dt>Website</dt><dd><a href="https://apcreativecorp.com/en" target="_blank" rel="noopener noreferrer">apcreativecorp.com</a></dd></div>
+          </dl>
+          <p>
+            A creative agency delivering digital marketing, website design and
+            SEO, events, exhibitions, brand activation and LED billboard
+            advertising. All four production systems on this site were built or
+            are maintained here.
+          </p>
+          <h4 class="d-h">What I do</h4>
+          <ul class="d-list">
+            <li>Take client systems from planning and data modelling through to a live domain</li>
+            <li>Build ordering, delivery, reservation and catalogue platforms in Next.js and Prisma</li>
+            <li>Integrate payment and logistics providers — Xendit invoices and Lalamove courier dispatch, including webhook ingestion and retries</li>
+            <li>Build role-based admin dashboards and commission systems behind the public site</li>
+            <li>Maintain and extend inherited codebases: features, fixes, performance, technical SEO</li>
+            <li>Deploy and monitor on Vercel, and work with designers and marketing on requirements</li>
+          </ul>
+          <h4 class="d-h">Systems</h4>
+          <ul class="d-list">
+            <li><a href="https://www.alqaysar-restaurant.com/" target="_blank" rel="noopener noreferrer">Al Qaysar Restaurant</a> — built from scratch</li>
+            <li><a href="https://www.lobosuperclub.com/" target="_blank" rel="noopener noreferrer">LOBO Superclub &amp; VIP JTV</a> — built from scratch</li>
+            <li><a href="https://www.progroup.com.ph/" target="_blank" rel="noopener noreferrer">Pro Group E-Bike</a> — maintained &amp; enhanced</li>
+            <li><a href="https://neonnightsbarclub.com/" target="_blank" rel="noopener noreferrer">Neon Nights Bar Club</a> — maintained &amp; enhanced</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="d-ntt" role="dialog" aria-modal="true" aria-labelledby="d-ntt-t" inert>
+      <div class="dialog-panel">
+        <div class="dialog-head">
+          <div>
+            <span class="mono">Previous role</span>
+            <h3 id="d-ntt-t">NTT Limited Philippines Branch</h3>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Close dialog">
+            <svg aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <div class="dialog-body">
+          <dl class="d-facts">
+            <div><dt>Position</dt><dd>Junior Fullstack Developer</dd></div>
+            <div><dt>Period</dt><dd>March – July 2025</dd></div>
+            <div><dt>Location</dt><dd>CINQ Bldg, Metropoli Residenza, Quezon City</dd></div>
+          </dl>
+          <p>
+            Our team built both the player-side and back-office systems for a
+            casino game platform from the ground up, with a focus on
+            performance, scalability and security.
+          </p>
+          <h4 class="d-h">Contributions</h4>
+          <ul class="d-list">
+            <li>Backend logic and RESTful APIs in Laravel with clean, maintainable code</li>
+            <li>Interactive, responsive frontend interfaces in React</li>
+            <li>Go scripts for data fetching and service integration</li>
+            <li>Database design and schema refinement for scalable data handling</li>
+            <li>Code reviews, clean architecture and OOP design patterns</li>
+            <li>Close collaboration with designers, QA and other developers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="dialog" id="d-golden" role="dialog" aria-modal="true" aria-labelledby="d-gold-t" inert>
+      <div class="dialog-panel">
+        <div class="dialog-head">
+          <div>
+            <span class="mono">First developer role</span>
+            <h3 id="d-gold-t">Golden Arrow Digital Solutions</h3>
+          </div>
+          <button class="dialog-close" type="button" aria-label="Close dialog">
+            <svg aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <div class="dialog-body">
+          <dl class="d-facts">
+            <div><dt>Position</dt><dd>Junior PHP Programmer</dd></div>
+            <div><dt>Period</dt><dd>January 2024 – February 2025</dd></div>
+            <div><dt>Location</dt><dd>331 Building, Sen. Gil Puyat Ave. Ext., Makati City</dd></div>
+          </dl>
+          <p>
+            My brief was to improve and optimise the company's existing web
+            platform — updating legacy code, raising performance and smoothing
+            out functionality across every module.
+          </p>
+          <h4 class="d-h">Contributions</h4>
+          <ul class="d-list">
+            <li>Refactored legacy modules to clean, optimised OOP standards</li>
+            <li>Developed RESTful APIs from scratch using established design patterns</li>
+            <li>Wrote unit and feature tests; validated endpoints with Postman</li>
+            <li>Improved overall system responsiveness and maintainability</li>
+            <li>Handled frontend tasks outside a backend assignment to keep UI/UX consistent</li>
+            <li>Collaborated with a team of five developers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================ LIGHTBOX ============================ -->
+    <div class="dialog" id="lightbox" role="dialog" aria-modal="true" aria-label="Project screenshots" inert>
+      <div class="lb">
+        <div class="lb-bar">
+          <p class="lb-title mono" id="lb-title"></p>
+          <p class="lb-count mono" id="lb-count" aria-live="polite"></p>
+          <button class="dialog-close" type="button" aria-label="Close gallery">
+            <svg aria-hidden="true"><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <div class="lb-stage">
+          <button class="lb-nav lb-prev" type="button" aria-label="Previous screenshot">
+            <svg aria-hidden="true"><use href="#i-left" /></svg>
+          </button>
+          <img id="lb-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" />
+          <button class="lb-nav lb-next" type="button" aria-label="Next screenshot">
+            <svg aria-hidden="true"><use href="#i-right" /></svg>
+          </button>
+        </div>
+        <div class="lb-thumbs" id="lb-thumbs" aria-label="Jump to screenshot"></div>
+      </div>
+    </div>
+
+    <script src="script.js?v=20260729" defer></script>
   </body>
 </html>
