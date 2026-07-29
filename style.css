@@ -764,12 +764,38 @@ strong {
 }
 
 /* ---- Code window: a supporting visual, deliberately quiet ---- */
+/* The code window runs OPPOSITE the page: a dark editor on a light page, a
+   light one in dark mode. Every part of the card already reads semantic
+   tokens, so reassigning them here inverts the bar, dots, filename, code and
+   borders in one place — no per-element overrides, no markup change. */
 .code-card {
+  --surface: #17171b;
+  --surface-2: #1e1e23;
+  --border: #2c2c33;
+  --border-2: #3d3d46;
+  --text: #f5f5f6; /* highlighted values */
+  --text-2: #9c9ca4; /* keys and punctuation — 6.4:1 on the card */
+  --text-3: #a3a3ab; /* filename in the bar */
+
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   box-shadow: var(--shadow-2);
   overflow: hidden;
+}
+
+[data-theme="dark"] .code-card {
+  --surface: #ffffff;
+  --surface-2: #f5f5f6;
+  --border: #e2e2e4;
+  --border-2: #cdcdd1;
+  --text: #0f0f12;
+  --text-2: #5c5c63;
+  --text-3: #5c5c63;
+
+  /* A dark drop shadow is invisible against a dark page; a hairline ring
+     gives the light card an edge instead. */
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
 .code-bar {
@@ -805,23 +831,26 @@ strong {
   display: block;
   color: var(--text-2);
   font-family: var(--font-mono);
-  /* Scales with the viewport so the longest line fits a 320px screen without
-     a horizontal scrollbar — the previous fixed floor overflowed on mobile. */
-  font-size: clamp(0.62rem, 0.5rem + 0.55vw, 0.8rem);
+  /* Scales with the viewport so the longest line — currently the 44-char
+     `database:` row — fits a 320px screen without a horizontal scrollbar.
+     Lower the floor again if a longer line is ever added. */
+  font-size: clamp(0.56rem, 0.48rem + 0.5vw, 0.8rem);
   line-height: 1.85;
   white-space: pre;
   tab-size: 2;
 }
 
-@media (max-width: 575.98px) {
-  .code-card pre {
-    padding: var(--s-4);
-  }
-}
-
+/* Values carry the emphasis, keys and punctuation recede — two tones is as
+   close to syntax highlighting as a monochrome palette should get. */
 .code-card code b {
   color: var(--text);
   font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+  .code-card pre {
+    padding: var(--s-3);
+  }
 }
 
 /* ---- Stats ---- */
