@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ian1219.github.io/adrian-dev-showcase/sitemap.xml
+Sitemap: https://ian1219.github.io/adrian/sitemap.xml

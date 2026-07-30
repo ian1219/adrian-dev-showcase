@@ -507,6 +507,57 @@ strong {
   gap: var(--s-2);
 }
 
+.header-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 36px;
+  padding: 0 var(--s-4);
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--r-pill);
+  color: var(--text);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease);
+}
+
+.header-resume svg {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+
+.header-resume:hover,
+.header-resume:focus-visible {
+  background: var(--surface-2);
+  border-color: var(--text-3);
+}
+
+@media (max-width: 479.98px) {
+  .header-resume {
+    justify-content: center;
+    width: var(--tap);
+    min-height: var(--tap);
+    padding: 0;
+    border-radius: var(--r-sm);
+  }
+
+  .header-resume span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
 /* ---- Theme toggle: two slots, knob sits centred under the active icon ---- */
 .theme-toggle {
   position: relative;

@@ -3,7 +3,7 @@
 Personal portfolio for **Adrian Del Rosario**, Full-Stack Developer (Manila, PH).
 Static site — no build step, no dependencies to install.
 
-Live at <https://ian1219.github.io/adrian-dev-showcase/>
+Live at <https://ian1219.github.io/adrian/>
 
 ## Stack
 
